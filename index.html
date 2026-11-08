@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jon Muñoa. Ingeniero de software. Pienso, construyo y automatizo soluciones.">
+  <title>Jon Muñoa — Ingeniería, producto y sistemas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#08090b;--panel:#0d1012;--ink:#eef2f2;--muted:#99a5a3;--dim:#66716f;--line:rgba(238,242,242,.14);--accent:#7df9d0;--accent-soft:rgba(125,249,208,.08);--max:1240px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:linear-gradient(rgba(125,249,208,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(125,249,208,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 50% 0,#000 18%,transparent 72%)}
+    a{color:inherit;text-decoration:none} a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+    ::selection{background:var(--accent);color:var(--bg)}
+    .mono{font-family:"JetBrains Mono",monospace}.accent{color:var(--accent)}.muted{color:var(--muted)}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .eyebrow{margin:0 0 18px;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+    .section{padding:clamp(72px,9vw,132px) 0;border-top:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,440px);gap:34px;align-items:end;margin-bottom:clamp(40px,6vw,72px)}
+    h1,h2,h3,p{margin-top:0} h2{margin-bottom:0;font-size:clamp(42px,6vw,82px);line-height:.98;letter-spacing:-.05em} .lead{margin:0;color:var(--muted);font-size:clamp(17px,1.7vw,21px);line-height:1.65}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,9,11,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(125,249,208,.2)}
+    .nav{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font:700 14px/1 "JetBrains Mono",monospace}.status-dot{width:8px;height:8px;background:var(--accent);box-shadow:0 0 14px var(--accent);animation:pulse 2.2s ease-in-out infinite}.links{display:flex;gap:clamp(12px,2.2vw,28px);font:400 12px/1 "JetBrains Mono",monospace;color:var(--muted)}.links a:hover{color:var(--accent)}.sys{font:400 12px/1 "JetBrains Mono",monospace;color:var(--dim)}
+    .progress{height:2px;background:rgba(125,249,208,.1)}.progress i{display:block;height:100%;width:0;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+    .hero{min-height:calc(100vh - 64px);display:flex;align-items:center;padding:clamp(56px,8vw,110px) 0 64px}.hero-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.1em}.chip{border:1px solid rgba(125,249,208,.4);padding:7px 11px;color:var(--accent)}.hero h1{margin:clamp(30px,5vw,58px) 0 30px;max-width:1050px;font-size:clamp(54px,9.2vw,132px);line-height:.88;letter-spacing:-.065em}.hero h1 span{display:block}.hero-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,430px);gap:48px;align-items:end}.hero-copy>p{margin:0;max-width:32ch;font-size:clamp(19px,2vw,27px);line-height:1.45}.manifest{border-left:1px solid var(--accent);padding-left:24px;color:var(--muted);font-size:17px;line-height:1.68}.triad{margin-top:clamp(48px,7vw,84px);display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.triad div{padding:20px 24px;display:flex;gap:15px;align-items:baseline}.triad div+div{border-left:1px solid var(--line)}.triad b{font:500 12px/1 "JetBrains Mono",monospace;color:var(--accent)}.triad span{font-size:clamp(18px,2vw,25px);font-weight:600;text-transform:uppercase}
+    .ticker{overflow:hidden;border-block:1px solid var(--line);background:var(--accent-soft)}.ticker-track{display:flex;width:max-content;padding:13px 0;animation:ticker 34s linear infinite;font:400 12px/1 "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--dim)}.ticker-track span{padding-right:42px}
+    .now{background:rgba(238,242,242,.018)}.now-claim{max-width:19ch;font-size:clamp(42px,6.5vw,88px);line-height:.98;letter-spacing:-.055em;font-weight:700}.now-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr);gap:clamp(40px,8vw,110px);align-items:start}.now-copy p{font-size:18px;line-height:1.72;color:var(--muted)}.now-copy .now-subclaim{margin:0 0 26px;max-width:18ch;font-size:clamp(27px,3vw,40px);line-height:1.08;letter-spacing:-.035em;font-weight:600;color:var(--ink)}.parallel{margin-top:32px;border:1px solid rgba(125,249,208,.38);background:var(--accent-soft);padding:24px}.parallel strong{font:700 clamp(42px,5vw,66px)/1 "JetBrains Mono",monospace;color:var(--accent)}.parallel span{display:block;margin-top:9px;color:#d8dfde;font-size:17px;line-height:1.5}.workflow{border-top:1px solid var(--line)}.workflow-row{display:grid;grid-template-columns:52px minmax(130px,.65fr) 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}.workflow-row>span{font:500 12px/1 "JetBrains Mono",monospace;color:var(--accent)}.workflow-row b{font-size:20px}.workflow-row em{font-style:normal;color:var(--dim);font-size:15px}.automate-note{grid-column:1/-1;margin-top:20px;padding:18px 20px;border:1px dashed rgba(125,249,208,.34);font:400 13px/1.7 "JetBrains Mono",monospace;color:var(--muted)}
+    .projects{display:grid;gap:20px}.project{position:relative;overflow:hidden;border:1px solid var(--line);background:rgba(238,242,242,.02);display:grid;grid-template-columns:minmax(280px,.85fr) minmax(440px,1.15fr)}.project-copy{padding:clamp(28px,4vw,50px)}.project-top{display:flex;justify-content:space-between;gap:16px;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.1em;color:var(--accent)}.project h3{margin:22px 0 12px;font-size:clamp(36px,4.6vw,62px);line-height:.95;letter-spacing:-.05em}.project .project-hook{margin:0 0 22px;color:var(--ink);font-size:clamp(20px,2.2vw,27px);line-height:1.25;font-weight:500;letter-spacing:-.025em}.project p{margin:0;color:var(--muted);font-size:18px;line-height:1.65}.visual{min-height:330px;border-left:1px solid var(--line);padding:clamp(26px,4vw,50px);display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(125,249,208,.055),transparent 60%)}
+    .flow{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:center}.node{min-height:78px;border:1px solid rgba(125,249,208,.34);display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font:500 11px/1.5 "JetBrains Mono",monospace;color:#cbd5d3;position:relative}.node:not(:last-child)::after{content:"→";position:absolute;right:-13px;color:var(--accent);z-index:2}.stats{grid-column:1/-1;display:flex;gap:clamp(25px,5vw,64px);flex-wrap:wrap;padding:24px clamp(28px,4vw,50px);border-top:1px solid rgba(125,249,208,.25);background:rgba(125,249,208,.035)}.stat b{display:block;font:700 clamp(28px,3vw,42px)/1 "JetBrains Mono",monospace;color:var(--accent)}.stat span{display:block;margin-top:7px;font:400 11px/1 "JetBrains Mono",monospace;color:var(--dim);letter-spacing:.09em}.chart{width:100%;height:210px;display:grid;grid-template-columns:repeat(12,1fr);gap:8px;align-items:end;border-bottom:1px solid rgba(125,249,208,.4);position:relative}.bar{background:rgba(125,249,208,.2);border-top:2px solid var(--accent)}.chart::before{content:"HISTÓRICO GARMIN + OBJETIVOS";position:absolute;top:0;left:0;font:400 11px/1 "JetBrains Mono",monospace;color:var(--dim)}.chart::after{content:"IA → PLAN MENSUAL";position:absolute;top:0;right:0;font:500 11px/1 "JetBrains Mono",monospace;color:var(--accent)}.phone{width:min(270px,82%);border:1px solid rgba(125,249,208,.5);border-radius:28px;padding:18px;background:#0a0c0e;box-shadow:0 0 50px rgba(125,249,208,.08)}.phone-head{height:8px;width:54px;background:#242b2a;border-radius:10px;margin:0 auto 24px}.screen-row{display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid var(--line);font:400 11px/1.4 "JetBrains Mono",monospace}.screen-row b{color:var(--accent)}.screen-insight{margin-top:18px;padding:15px;border:1px solid rgba(125,249,208,.28);font:400 11px/1.55 "JetBrains Mono",monospace;color:var(--muted)}
+    .lab-archive{background:rgba(238,242,242,.018)}.lab-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(360px,1.2fr);gap:clamp(40px,8vw,110px)}.experiment{border:1px dashed rgba(125,249,208,.45);padding:clamp(28px,4vw,48px);background:var(--accent-soft);position:relative}.experiment::before{content:"LIVE EXPERIMENT";position:absolute;top:-7px;right:20px;background:var(--bg);padding:0 10px;font:500 10px/1 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.12em}.experiment h3{margin:18px 0 14px;font-size:clamp(30px,4vw,46px);line-height:1.05}.experiment p{color:var(--muted);font-size:18px;line-height:1.65}.signal{margin-top:30px;display:flex;gap:7px;align-items:end;height:82px}.signal i{display:block;flex:1;background:rgba(125,249,208,.24);border-top:1px solid var(--accent)}.archive-title{display:flex;justify-content:space-between;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line);font:500 12px/1 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.12em}.archive-item{display:grid;grid-template-columns:82px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}.archive-item time{font:500 12px/1.4 "JetBrains Mono",monospace;color:var(--accent)}.archive-item h3{margin:0 0 8px;font-size:22px}.archive-item p{margin:0;color:var(--muted);font-size:16px;line-height:1.6}.archive-tag{display:inline-block;margin-top:11px;font:400 11px/1 "JetBrains Mono",monospace;color:var(--dim)}
+    .career-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:20px}.current{border:1px solid var(--accent);background:var(--accent-soft);padding:clamp(30px,4vw,52px)}.current-label{display:flex;justify-content:space-between;gap:20px;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.11em;color:var(--accent)}.current h3{margin:26px 0 8px;font-size:clamp(44px,6vw,74px);line-height:1;letter-spacing:-.055em}.role{font:500 14px/1 "JetBrains Mono",monospace;color:#cbd5d3}.current-copy{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.current-copy p{margin:0;color:var(--muted);font-size:17px;line-height:1.68}.stack{margin-top:30px;padding-top:20px;border-top:1px solid rgba(125,249,208,.3);font:400 12px/1.9 "JetBrains Mono",monospace;color:var(--accent)}.before{border:1px solid var(--line);padding:clamp(30px,4vw,44px)}.before-head{font:500 12px/1 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.11em}.before h3{margin:24px 0 14px;font-size:clamp(32px,4vw,48px);line-height:1.05}.before>p{color:var(--muted);font-size:16px;line-height:1.65}.company{display:grid;grid-template-columns:1fr auto;gap:12px;padding:17px 0;border-top:1px solid var(--line)}.company b{font-size:19px}.company span{font:400 11px/1.4 "JetBrains Mono",monospace;color:var(--dim);text-align:right}
+    .about{background:rgba(238,242,242,.018)}.about-grid{display:grid;grid-template-columns:minmax(300px,.8fr) minmax(0,1.2fr);gap:clamp(40px,8vw,110px);align-items:start}.portrait{margin:0;aspect-ratio:4/5;border:1px solid rgba(125,249,208,.4);position:relative;overflow:hidden;background:#111517}.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 42%;filter:saturate(.86) contrast(1.04)}.portrait figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(transparent,rgba(8,9,11,.9));font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.1em;color:var(--accent)}.about-copy{display:flex;flex-direction:column;justify-content:space-between;min-height:100%}.about-copy h3{margin:0 0 24px;max-width:14ch;font-size:clamp(40px,5vw,68px);line-height:1;letter-spacing:-.045em}.about-copy>div>p{max-width:48ch;color:var(--muted);font-size:19px;line-height:1.7}.sport-week{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.sport-week div{padding:18px}.sport-week div+div{border-left:1px solid var(--line)}.sport-week b{display:block;font:500 11px/1 "JetBrains Mono",monospace;color:var(--accent);margin-bottom:9px}.values{margin-top:42px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.value{padding-top:16px;border-top:2px solid var(--accent)}.value b{display:block;font:700 15px/1 "JetBrains Mono",monospace;color:var(--ink)}.value p{margin:10px 0 0;color:var(--dim);font-size:14px;line-height:1.55}
+    footer{border-top:1px solid rgba(125,249,208,.25)}.footer{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;font:400 12px/1 "JetBrains Mono",monospace;color:var(--dim)}.footer b{color:var(--ink)}.footer a{color:var(--accent)}
+    @keyframes pulse{50%{opacity:.35;transform:scale(.7)}}@keyframes ticker{to{transform:translateX(-50%)}}
+    @media(max-width:900px){.links{display:none}.hero-copy,.section-head,.now-grid,.project,.lab-grid,.career-grid,.about-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(51px,13vw,92px)}.visual{border-left:0;border-top:1px solid var(--line)}.current-copy{grid-template-columns:1fr}.portrait{width:min(100%,520px);order:2}}
+    @media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 32px))}.sys{display:none}.hero{min-height:auto}.hero-copy{gap:28px}.triad{grid-template-columns:1fr}.triad div+div{border-left:0;border-top:1px solid var(--line)}.workflow-row{grid-template-columns:38px 1fr}.workflow-row em{grid-column:2}.flow{grid-template-columns:1fr 1fr}.node:nth-child(2)::after{display:none}.stats{gap:24px}.archive-item{grid-template-columns:62px 1fr}.sport-week,.values{grid-template-columns:1fr}.sport-week div+div{border-left:0;border-top:1px solid var(--line)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.status-dot,.ticker-track{animation:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio"><i class="status-dot" aria-hidden="true"></i>JON_MUÑOA</a>
+      <nav class="links" aria-label="Navegación principal"><a href="#ahora">/ahora</a><a href="#construyo">/construyo</a><a href="#laboratorio">/laboratorio</a><a href="#trayectoria">/trayectoria</a><a href="#sobre-mi">/sobre-mi</a></nav>
+      <span class="sys">SYS · 2026</span>
+    </div>
+    <div class="progress" aria-hidden="true"><i id="scroll-progress"></i></div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-meta"><span class="chip">INGENIERO DE SOFTWARE</span><span class="muted">DESDE 2013 · SISTEMA ACTIVO</span></div>
+        <h1><span>El código es el medio.</span><span class="accent">El valor está en la solución.</span></h1>
+        <div class="hero-copy">
+          <p>Entender el problema. Diseñar qué merece la pena construir. Convertirlo en algo que funciona.</p>
+          <div class="manifest">La IA ha desplazado mi trabajo hacia donde más valor aporta: entender problemas, diseñar soluciones, dirigir la construcción y validar resultados.</div>
+        </div>
+        <div class="triad" aria-label="Principios"><div><b>01</b><span>Pienso</span></div><div><b>02</b><span>Construyo</span></div><div><b>03</b><span>Automatizo</span></div></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>PROBLEMA — CONTEXTO — DECISIÓN — AGENTES — REVISIÓN HUMANA — VALIDACIÓN FUNCIONAL — PRODUCTO —</span><span>PROBLEMA — CONTEXTO — DECISIÓN — AGENTES — REVISIÓN HUMANA — VALIDACIÓN FUNCIONAL — PRODUCTO —</span></div></div>
+
+    <section class="section now" id="ahora">
+      <div class="wrap">
+        <p class="eyebrow">01 · AHORA / INGENIERÍA CON IA</p>
+        <p class="now-claim">El código se ha abaratado. <span class="accent">Las buenas decisiones no.</span></p>
+        <div class="now-grid">
+          <div class="now-copy">
+            <p class="now-subclaim">Construyo más soluciones. <span class="accent">Escribo menos código.</span></p>
+            <p>Generar software ya no es el principal cuello de botella. El trabajo está en entender el problema, decidir qué merece la pena construir, dirigir la ejecución y demostrar que el resultado funciona.</p>
+            <p>Claude Code y Codex investigan e implementan. Herramientas propias automatizan la preparación de cada tarea; yo reviso el código y valido el resultado funcional.</p>
+            <div class="parallel"><strong>4—5</strong><span>líneas de trabajo simultáneas entre investigación e implementación.</span></div>
+          </div>
+          <div class="workflow" aria-label="Flujo de trabajo actual">
+            <div class="workflow-row"><span>01</span><b>Entender</b><em>problema, contexto y valor</em></div>
+            <div class="workflow-row"><span>02</span><b>Diseñar</b><em>solución y plan junto a IA</em></div>
+            <div class="workflow-row"><span>03</span><b>Dirigir</b><em>investigación e implementación con agentes</em></div>
+            <div class="workflow-row"><span>04</span><b>Revisar</b><em>código y decisiones técnicas</em></div>
+            <div class="workflow-row"><span>05</span><b>Validar</b><em>resultado visual o de proceso</em></div>
+            <div class="automate-note">PREPARACIÓN AUTOMÁTICA → DESPLIEGUE DE PRUEBAS / CI·CD → VALIDACIÓN HUMANA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="construyo">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">02 · CONSTRUYO</p><h2>Problemas convertidos en sistemas.</h2></div><p class="lead">Tres proyectos reales. Sin capturas ficticias: los diagramas muestran el flujo y la intención de cada producto.</p></div>
+        <div class="projects">
+          <article class="project">
+            <div class="project-copy"><div class="project-top"><span>PROYECTO / 01</span><span>AUTOMATIZACIÓN</span></div><h3>Bot ofertas afiliados</h3><p class="project-hook">De las APIs al canal, sin trabajo manual.</p><p>Un motor que consulta las APIs de Amazon y AliExpress, detecta ofertas por nicho, genera el enlace de afiliación y publica automáticamente en Telegram y WhatsApp.</p></div>
+            <div class="visual"><div class="flow" aria-label="Flujo abstracto del motor de ofertas"><div class="node">AMAZON<br>ALIEXPRESS</div><div class="node">DETECCIÓN<br>POR NICHO</div><div class="node">ENLACE DE<br>AFILIACIÓN</div><div class="node">TELEGRAM<br>WHATSAPP</div></div></div>
+            <div class="stats"><div class="stat"><b>10</b><span>CANALES</span></div><div class="stat"><b>+1.000</b><span>USUARIOS</span></div><div class="stat"><b>~500 €</b><span>AL AÑO</span></div></div>
+          </article>
+          <article class="project">
+            <div class="project-copy"><div class="project-top"><span>PROYECTO / 02</span><span>ENTRENAMIENTO</span></div><h3>Personal Fit Tracker</h3><p class="project-hook">Registrar no es decidir.</p><p>Garmin aporta el histórico. Mis objetivos dan contexto. La IA convierte ambos en una planificación mensual que uso para entrenar.</p></div>
+            <div class="visual"><div class="chart" aria-label="Representación abstracta del histórico de entrenamientos"><i class="bar" style="height:32%"></i><i class="bar" style="height:55%"></i><i class="bar" style="height:44%"></i><i class="bar" style="height:72%"></i><i class="bar" style="height:61%"></i><i class="bar" style="height:84%"></i><i class="bar" style="height:48%"></i><i class="bar" style="height:67%"></i><i class="bar" style="height:76%"></i><i class="bar" style="height:58%"></i><i class="bar" style="height:90%"></i><i class="bar" style="height:70%"></i></div></div>
+          </article>
+          <article class="project">
+            <div class="project-copy"><div class="project-top"><span>PROYECTO / 03</span><span>APP ANDROID</span></div><h3>Uso de RRSS</h3><p class="project-hook">Entender dónde se va mi atención.</p><p>Una app que registra el uso de redes sociales, resume cada día el uso del anterior y muestra insights sobre aplicaciones y franjas horarias.</p></div>
+            <div class="visual"><div class="phone" aria-label="Representación abstracta de la app Android"><div class="phone-head"></div><div class="screen-row"><span>RESUMEN / AYER</span><b>DATOS</b></div><div class="screen-row"><span>APLICACIONES</span><b>→</b></div><div class="screen-row"><span>FRANJAS HORARIAS</span><b>→</b></div><div class="screen-insight">INSIGHT DIARIO<br><span class="accent">MEDIR → RESUMIR → COMPRENDER</span></div></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lab-archive" id="laboratorio">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">03 · LABORATORIO + ARCHIVO</p><h2>Lo que pruebo. Lo que queda.</h2></div><p class="lead">El laboratorio está vivo. El archivo conserva experimentos y proyectos anteriores sin fingir que todos siguen activos.</p></div>
+        <div class="lab-grid">
+          <article class="experiment"><span class="eyebrow">LAB / EXP·001 / ACTUAL</span><h3>Bot de predicciones</h3><p>Experimento con predicciones de deportes, esports y política. El trabajo actual consiste en afinarlo para aumentar su capacidad de acierto.</p><div class="signal" aria-hidden="true"><i style="height:18%"></i><i style="height:42%"></i><i style="height:27%"></i><i style="height:64%"></i><i style="height:38%"></i><i style="height:78%"></i><i style="height:53%"></i><i style="height:88%"></i><i style="height:70%"></i></div></article>
+          <div><div class="archive-title"><span>ARCHIVO</span><span>2016 → HOY</span></div>
+            <article class="archive-item"><time>2016</time><div><h3>Blog y repositorios .NET</h3><p>Notas y pequeñas pruebas públicas sobre Quartz, Swagger, log4net, inyección de dependencias, patrones y extensiones.</p><span class="archive-tag">ARCHIVO TÉCNICO</span></div></article>
+            <article class="archive-item"><time>2020</time><div><h3>Detector ML de test de embarazo</h3><p>Aplicación .NET que interpretaba una fotografía mediante machine learning. Estuvo publicada; hoy está retirada.</p><span class="archive-tag">PUBLICADO → RETIRADO</span></div></article>
+            <article class="archive-item"><time>~4 AÑOS</time><div><h3>Penique / Sorare</h3><p>Vídeos sobre creación de equipos, fichajes, jugadores y estrategias para ganar dinero en Sorare.</p><span class="archive-tag">~2.000 SUSCRIPTORES</span></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trayectoria">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">04 · TRAYECTORIA</p><h2>Ahora tiene más peso que antes.</h2></div><p class="lead">La experiencia da contexto. La forma actual de resolver problemas define el siguiente paso.</p></div>
+        <div class="career-grid">
+          <article class="current"><div class="current-label"><span>AHORA / 2022—ACTUALIDAD</span><span>FOREWORTH</span></div><h3>Foreworth</h3><div class="role">INGENIERO DE SOFTWARE · FULL-STACK CON FOCO BACKEND / DATOS</div><div class="current-copy"><p>Trabajo en una plataforma que analiza código fuente y transforma la información extraída en KPIs para clientes. Me responsabilizo de decisiones técnicas y soluciones junto al CTO.</p><p>Optimizo memoria, consultas y procesos; reorganizar flujos ha permitido ahorrar horas y días de ejecución, mejorando eficiencia, coste y fiabilidad de los datos.</p></div><div class="stack">.NET · HANGFIRE · MYSQL · ANGULAR · ATHENA · LAMBDA · GLUE · S3 · ECS · CLOUDWATCH</div></article>
+          <article class="before"><div class="before-head">ANTES / 2013—2022</div><h3>Una década aprendiendo a construir.</h3><p>Backend, frontend, bases de datos, APIs, integraciones, sistemas internos y liderazgo técnico.</p><div class="company"><b>BQ</b><span>03/2013—04/2017<br>INGENIERO DE SOFTWARE</span></div><div class="company"><b>VASS</b><span>04/2017—11/2017<br>ANALISTA DE SOFTWARE</span></div><div class="company"><b>Quodem</b><span>11/2017—03/2022<br>TECHNICAL LEAD</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre-mi">
+      <div class="wrap">
+        <p class="eyebrow">05 · SOBRE MÍ</p>
+        <div class="about-grid">
+          <figure class="portrait"><img src="assets/jon-munoa.png" alt="Jon Muñoa después de una carrera, con ropa deportiva y su dorsal"><figcaption>JON / FUERA DE LA PANTALLA</figcaption></figure>
+          <div class="about-copy"><div><h3>Fuera de la pantalla.</h3><p>El deporte ocupa una parte importante de mi semana. El resto del tiempo lo reparto entre mi familia y proyectos personales, sin separar demasiado la curiosidad de las ganas de construir.</p><div class="sport-week"><div><b>SEMANAL</b>Running</div><div><b>MÍNIMO 2×</b>Fuerza</div><div><b>DOMINGOS</b>Bici</div></div></div><div class="values"><div class="value"><b>ACTITUD</b><p>Buscar cómo resolverlo.</p></div><div class="value"><b>EJEMPLO</b><p>Hacer antes que decir.</p></div><div class="value"><b>ESFUERZO</b><p>Las herramientas cambian. El compromiso, no.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer"><b>JON_MUÑOA</b><span>PIENSO · CONSTRUYO · AUTOMATIZO</span><a href="#inicio">↑ VOLVER ARRIBA</a></div></footer>
+  <script>
+    const progress=document.getElementById('scroll-progress');
+    const updateProgress=()=>{const root=document.documentElement;const max=root.scrollHeight-root.clientHeight;progress.style.width=(max?Math.min(100,root.scrollTop/max*100):0)+'%'};
+    addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);updateProgress();
+  </script>
+</body>
+</html>
