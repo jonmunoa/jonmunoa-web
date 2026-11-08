@@ -9,7 +9,7 @@
       "category": "Automatización",
       "status": "activo",
       "hook": "De las APIs al canal, sin trabajo manual.",
-      "description": "Un motor que consulta Amazon, AliExpress y Temu, detecta ofertas por nicho, genera el enlace de afiliación y publica solo en Telegram y WhatsApp. Las ofertas de pañales ya salen como tarjeta con imagen.",
+      "description": "Un motor que consulta Amazon, AliExpress y Temu, detecta ofertas por nicho, genera el enlace de afiliación y publica solo en Telegram y WhatsApp. Cada oferta sale como tarjeta con la foto, el precio y lo que te ahorras.",
       "stack": [
         ".NET",
         "GitHub Actions",
