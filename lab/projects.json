@@ -65,7 +65,7 @@
       "category": "Web · afiliación",
       "status": "activo",
       "hook": "Lo justo para la llegada del bebé, sin humo.",
-      "description": "Listas cerradas por escenario para futuros padres en España: qué es imprescindible, qué es útil y qué depende. Checklist marcable, carrito de Amazon en un clic, test, calculadora y guías con fuentes oficiales.",
+      "description": "Más de 20 kits para preparar la llegada del bebé en España, con el de cada temporada destacado: qué es imprescindible, qué es útil y qué depende. Checklist marcable, carrito de Amazon en un clic y comparativas de los productos mejor valorados.",
       "stack": [
         "Astro",
         "Vercel",
@@ -75,7 +75,7 @@
       "url": "https://kitmaternidad.com",
       "urlLabel": "kitmaternidad.com",
       "started": "2026-10",
-      "updated": "2026-10-29",
+      "updated": "2026-11-08",
       "captures": [
         {
           "file": "home",
@@ -100,7 +100,7 @@
           "alt": "Portada de kitmaternidad.com en el móvil"
         }
       ],
-      "lastSyncedCommit": "8879b32bee46c19fbf8ff75c7a9576e00e01cefa"
+      "lastSyncedCommit": "17bb549c8f8aa76a4039688e249346afb572537f"
     },
     {
       "id": "personal-fit",
