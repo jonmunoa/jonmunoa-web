@@ -286,8 +286,20 @@
       "started": "2026-10",
       "updated": "2026-10-31",
       "captures": [],
-      "screenshots": [],
-      "lastSyncedCommit": "ad2c20ac7af8b0d97bce99c31ae16c4e4a4372ad"
+      "screenshots": [
+        {
+          "file": "registrar",
+          "device": "mobile",
+          "alt": "Pantalla Registrar de Pinchazos: último pinchazo, dosis y hora"
+        },
+        {
+          "file": "informes",
+          "device": "mobile",
+          "alt": "Informes de Pinchazos: cuándo y cuánto en los últimos 7 días"
+        }
+      ],
+      "lastSyncedCommit": "ad2c20ac7af8b0d97bce99c31ae16c4e4a4372ad",
+      "screenshotsNote": "Capturadas en el emulador (TimeReclaimedApi35) con el APK dist/Pinchazos-2.2.apk y 30 días de datos de demo importados por CSV; no se recapturan solas."
     }
   ],
   "ignored": [
