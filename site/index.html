@@ -67,7 +67,7 @@
     .stats{grid-column:1/-1;display:flex;gap:clamp(25px,5vw,64px);flex-wrap:wrap;padding:24px clamp(28px,4vw,50px);border-top:1px solid rgba(125,249,208,.25);background:rgba(125,249,208,.035)}.stat b{display:block;font:700 clamp(28px,3vw,42px)/1 "JetBrains Mono",monospace;color:var(--accent)}.stat span{display:block;margin-top:7px;font:400 11px/1 "JetBrains Mono",monospace;color:var(--dim);letter-spacing:.09em}
 
     /* Laboratorio */
-    .lab{background:rgba(238,242,242,.018)}.lab-stamp{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 20px;padding-bottom:18px;margin-bottom:20px;border-bottom:1px solid var(--line);font:500 11px/1.4 "JetBrains Mono",monospace;letter-spacing:.12em;color:var(--dim)}.lab-stamp b{font-weight:500;color:var(--accent)}
+    .lab{background:rgba(238,242,242,.018)}
     .lab-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
     .lab-card{display:flex;flex-direction:column;border:1px solid var(--line);background:var(--bg);transition:border-color 200ms ease}.lab-card>.shot{padding:clamp(22px,3vw,34px);border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(125,249,208,.05),transparent 65%)}.lab-card>.shot-phones .device-phone{width:min(170px,40%)}.lab-card>.shot-empty{border:0;border-bottom:1px solid var(--line);aspect-ratio:auto;min-height:280px}
     .lab-body{padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;flex:1}.lab-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.1em;color:var(--accent)}.lab-card h3{margin:18px 0 8px;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-.04em}.lab-hook{margin:0 0 14px;font-size:19px;line-height:1.35;font-weight:500;letter-spacing:-.015em}.lab-body>p:not(.lab-hook){margin:0;color:var(--muted);font-size:16px;line-height:1.65}.lab-foot{margin-top:auto;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}.lab-date{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font:400 10px/1 "JetBrains Mono",monospace;letter-spacing:.12em;color:var(--dim)}
@@ -127,7 +127,7 @@
           <div class="now-copy">
             <p class="now-subclaim">Construyo más soluciones. <span class="accent">Escribo menos código.</span></p>
             <p>Generar software ya no es el principal cuello de botella. El trabajo está en entender el problema, decidir qué merece la pena construir, dirigir la ejecución y demostrar que el resultado funciona.</p>
-            <p>Claude Code y Codex investigan e implementan. Herramientas propias automatizan la preparación de cada tarea; yo reviso el código y valido el resultado funcional. Hasta esta web se actualiza sola cuando cambia uno de mis proyectos.</p>
+            <p>Claude Code y Codex investigan e implementan. Herramientas propias automatizan la preparación de cada tarea; yo reviso el código y valido el resultado funcional.</p>
             <div class="parallel"><strong>4—5</strong><span>líneas de trabajo simultáneas entre investigación e implementación.</span></div>
           </div>
           <div class="workflow" aria-label="Flujo de trabajo actual">
@@ -144,7 +144,7 @@
 
     <section class="section" id="construyo">
       <div class="wrap">
-        <div class="section-head"><div><p class="eyebrow">02 · CONSTRUYO</p><h2>Problemas convertidos en sistemas.</h2></div><p class="lead">Tres proyectos en uso real, con su enlace y capturas de cómo son hoy.</p></div>
+        <div class="section-head"><div><p class="eyebrow">02 · CONSTRUYO</p><h2>Problemas convertidos en sistemas.</h2></div></div>
         <div class="projects">
           <!-- BUILD:FEATURED -->
           <article class="project" id="p-bot-ofertas">
@@ -154,7 +154,7 @@
               <p class="project-hook">De las APIs al canal, sin trabajo manual.</p>
               <p>Un motor que consulta Amazon, AliExpress y Temu, detecta ofertas por nicho, genera el enlace de afiliación y publica solo en Telegram y WhatsApp. Las ofertas de pañales ya salen como tarjeta con imagen.</p>
               <ol class="pipeline" aria-label="Flujo"><li>Amazon · AliExpress · Temu</li><li>Detección por nicho</li><li>Enlace de afiliación</li><li>Telegram · WhatsApp</li></ol>
-              <div class="project-foot"><a class="btn" href="https://t.me/ofertasdepanales" target="_blank" rel="noopener">Ver un canal<span aria-hidden="true">↗</span></a><span class="meta">.NET · GitHub Actions · Telegram · WhatsApp</span></div>
+              <div class="project-foot"><a class="btn" href="https://t.me/ofertasdepanales" target="_blank" rel="noopener">Ver un canal<span aria-hidden="true">↗</span></a></div>
             </div>
             <div class="visual"><div class="shot shot-phones"><figure class="device device-phone"><img src="assets/lab/bot-ofertas/canal.webp" alt="Canal de Telegram de ofertas de pañales con las publicaciones del bot" width="780" height="1688" loading="lazy" decoding="async" sizes="200px"></figure></div></div>
             <div class="stats"><div class="stat"><b>10</b><span>CANALES</span></div><div class="stat"><b>+1.000</b><span>USUARIOS</span></div><div class="stat"><b>~500 €</b><span>AL AÑO</span></div></div>
@@ -166,7 +166,7 @@
               <p class="project-hook">Lo justo para la llegada del bebé, sin humo.</p>
               <p>Listas cerradas por escenario para futuros padres en España: qué es imprescindible, qué es útil y qué depende. Checklist marcable, carrito de Amazon en un clic, test, calculadora y guías con fuentes oficiales.</p>
               
-              <div class="project-foot"><a class="btn" href="https://kitmaternidad.com" target="_blank" rel="noopener">kitmaternidad.com<span aria-hidden="true">↗</span></a><span class="meta">Astro · Vercel · Amazon Afiliados · SEO</span></div>
+              <div class="project-foot"><a class="btn" href="https://kitmaternidad.com" target="_blank" rel="noopener">kitmaternidad.com<span aria-hidden="true">↗</span></a></div>
             </div>
             <div class="visual"><div class="shot shot-desktop has-phone"><figure class="device device-browser"><i aria-hidden="true"></i><img src="assets/lab/kitmaternidad/home.webp" alt="Portada de kitmaternidad.com" width="1440" height="900" loading="lazy" decoding="async" sizes="(max-width: 900px) 92vw, 640px"></figure><figure class="device device-phone device-overlap"><img src="assets/lab/kitmaternidad/home-movil.webp" alt="Portada de kitmaternidad.com en el móvil" width="780" height="1688" loading="lazy" decoding="async" sizes="160px"></figure></div></div>
             
@@ -178,7 +178,7 @@
               <p class="project-hook">Registrar no es decidir.</p>
               <p>Garmin aporta el histórico de running, bici, gimnasio y natación. Mis objetivos dan contexto. La IA convierte ambos en una planificación mensual que uso para entrenar, y cada actividad se puede compartir como un vídeo de la ruta.</p>
               
-              <div class="project-foot"><a class="btn" href="https://jonmunoafit.netlify.app/resumen" target="_blank" rel="noopener">jonmunoafit.netlify.app<span aria-hidden="true">↗</span></a><span class="meta">Next.js · Netlify · Garmin · IA</span></div>
+              <div class="project-foot"><a class="btn" href="https://jonmunoafit.netlify.app/resumen" target="_blank" rel="noopener">jonmunoafit.netlify.app<span aria-hidden="true">↗</span></a></div>
             </div>
             <div class="visual"><div class="shot shot-desktop has-phone"><figure class="device device-browser"><i aria-hidden="true"></i><img src="assets/lab/personal-fit/resumen.webp" alt="Resumen de entrenamiento de Personal Fit Tracker" width="1440" height="900" loading="lazy" decoding="async" sizes="(max-width: 900px) 92vw, 640px"></figure><figure class="device device-phone device-overlap"><img src="assets/lab/personal-fit/resumen-movil.webp" alt="Resumen de entrenamiento en el móvil" width="780" height="1688" loading="lazy" decoding="async" sizes="160px"></figure></div></div>
             
@@ -190,8 +190,7 @@
 
     <section class="section lab" id="laboratorio">
       <div class="wrap">
-        <div class="section-head"><div><p class="eyebrow">03 · LABORATORIO</p><h2>Lo que construyo ahora.</h2></div><p class="lead">Proyectos personales que hago con Claude Code. Esta sección se actualiza sola cada vez que uno de ellos cambia.</p></div>
-        <div class="lab-stamp"><b>SINCRONIZADO CON MIS REPOSITORIOS</b><!-- BUILD:LAB-STAMP --><span>ÚLTIMO CAMBIO · <time datetime="2026-11-07">7 NOV 2026</time> · DOSIFY</span><!-- /BUILD:LAB-STAMP --></div>
+        <div class="section-head"><div><p class="eyebrow">03 · LABORATORIO</p><h2>Lo que construyo ahora.</h2></div></div>
         <div class="lab-list">
           <!-- BUILD:LAB -->
           <article class="lab-card" id="p-dosify">
@@ -201,7 +200,7 @@
               <h3>Dosify</h3>
               <p class="lab-hook">Cuándo y cuánto, sin cuentas ni Internet.</p>
               <p>Registra las tomas de medicamentos por dosis o por pastillas, con informes de lo tomado frente a lo previsto. Todo se queda en el móvil. La versión 1.0 está preparada para Google Play.</p>
-              <div class="lab-foot"><span class="btn btn-off">Sin web pública</span><span class="meta">Kotlin · Jetpack Compose · Room</span></div>
+              <div class="lab-foot"><span class="btn btn-off">Sin web pública</span></div>
               <div class="lab-date">ACTUALIZADO · <time datetime="2026-11-07">7 NOV 2026</time></div>
             </div>
           </article>
@@ -212,7 +211,7 @@
               <h3>Pinchazos</h3>
               <p class="lab-hook">Cada pinchazo de insulina, en dos toques.</p>
               <p>Registra cuándo y cuánta insulina, con varias insulinas, informes por momento del día y exportación a CSV. Sin cuentas ni Internet. Fue el origen de Dosify.</p>
-              <div class="lab-foot"><span class="btn btn-off">Sin web pública</span><span class="meta">Kotlin · Jetpack Compose · Room</span></div>
+              <div class="lab-foot"><span class="btn btn-off">Sin web pública</span></div>
               <div class="lab-date">ACTUALIZADO · <time datetime="2026-10-31">31 OCT 2026</time></div>
             </div>
           </article>
@@ -223,18 +222,18 @@
               <h3>Gold/Silver Monitor</h3>
               <p class="lab-hook">Señales sobre el ratio oro/plata.</p>
               <p>Analiza el ratio XAU/XAG con RSI en cuatro temporalidades, detecta toques de zona, divergencias y confluencia, y avisa por Telegram. Incluye panel web con gráfico, historial de señales y simulador de resultados.</p>
-              <div class="lab-foot"><a class="btn" href="https://goldsilver-bot.netlify.app/" target="_blank" rel="noopener">goldsilver-bot.netlify.app<span aria-hidden="true">↗</span></a><span class="meta">Python · FastAPI · Telegram · Netlify</span></div>
+              <div class="lab-foot"><a class="btn" href="https://goldsilver-bot.netlify.app/" target="_blank" rel="noopener">goldsilver-bot.netlify.app<span aria-hidden="true">↗</span></a></div>
               <div class="lab-date">ACTUALIZADO · <time datetime="2026-10-25">25 OCT 2026</time></div>
             </div>
           </article>
           <article class="lab-card" id="p-time-reclaimed">
-            <div class="shot shot-phones"><figure class="device device-phone"><img src="assets/lab/time-reclaimed/hoy.webp" alt="Pantalla Hoy de Time Reclaimed" width="780" height="1688" loading="lazy" decoding="async" sizes="200px"></figure></div>
+            <div class="shot shot-phones"><figure class="device device-phone"><img src="assets/lab/time-reclaimed/today.webp" alt="Pantalla Hoy de Time Reclaimed: tiempo gastado y qué podrías haber hecho con él" width="780" height="1688" loading="lazy" decoding="async" sizes="200px"></figure><figure class="device device-phone"><img src="assets/lab/time-reclaimed/progress.webp" alt="Histórico de uso de Time Reclaimed en los últimos 7 días" width="780" height="1688" loading="lazy" decoding="async" sizes="200px"></figure></div>
             <div class="lab-body">
               <div class="lab-meta"><span>APP ANDROID</span><span class="status status-uso-personal">uso personal</span></div>
               <h3>Time Reclaimed</h3>
               <p class="lab-hook">Entender dónde se va mi atención.</p>
               <p>Registra el uso de redes sociales, resume cada mañana el día anterior y muestra insights por aplicación y franja horaria. Va por la versión 2.3.</p>
-              <div class="lab-foot"><span class="btn btn-off">Sin web pública</span><span class="meta">.NET Android · WebView</span></div>
+              <div class="lab-foot"><span class="btn btn-off">Sin web pública</span></div>
               <div class="lab-date">ACTUALIZADO · <time datetime="2026-09-09">9 SEPT 2026</time></div>
             </div>
           </article>

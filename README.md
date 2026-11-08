@@ -20,12 +20,11 @@ Web personal de Jon Muñoa, ingeniero de software: https://jonmunoa.netlify.app
    `~/.claude/hooks/web-sync-check.mjs` compara su HEAD con `lastSyncedCommit`.
 2. Si hay commits nuevos, Claude lanza la skill `actualizar-web`
    (`~/.claude/skills/actualizar-web/SKILL.md`): reescribe la ficha, rehace capturas,
-   regenera la página y hace push a `main`. Netlify despliega solo.
+   regenera la página y hace commit en local. **No hace push**: Jon publica cuando quiere
+   (cada push despliega en Netlify y gasta créditos).
 3. Un repo personal nuevo dispara una pregunta a Jon (una vez por semana como mucho);
    si no lo quiere en la web, se añade a `ignored`.
-4. Cada lunes, `.github/workflows/recapturar.yml` vuelve a capturar las webs en vivo.
-
-Los commits que solo sincronizan (sin cambios visibles) llevan `[skip netlify]`.
+4. `.github/workflows/recapturar.yml` rehace las capturas de las webs en vivo, solo a mano.
 
 ## En local
 

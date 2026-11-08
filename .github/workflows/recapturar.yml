@@ -1,9 +1,7 @@
-# Cada lunes vuelve a hacer las capturas de los proyectos que tienen web pública
-# y, si algo ha cambiado, regenera la página y hace commit (Netlify despliega solo).
+# Manual (Actions → Run workflow): rehace las capturas de las webs en vivo y hace commit.
+# Sin programación: cada push a main despliega en Netlify y gasta créditos.
 name: Recapturar webs en vivo
 on:
-  schedule:
-    - cron: '17 5 * * 1'
   workflow_dispatch:
 permissions:
   contents: write
@@ -27,4 +25,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add site
-          git diff --cached --quiet || (git commit -m "Recaptura semanal de las webs en vivo" && git push)
+          git diff --cached --quiet || (git commit -m "Recaptura de las webs en vivo" && git push)

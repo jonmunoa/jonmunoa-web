@@ -254,22 +254,21 @@
       ],
       "started": "2026-09",
       "updated": "2026-09-09",
-      "captures": [
-        {
-          "file": "hoy",
-          "url": "file:///C:/Users/JonMunoaGutierrez/source/repos/Dopamine%20Tracker/Assets/index.html",
-          "device": "mobile",
-          "colorScheme": "dark"
-        }
-      ],
+      "captures": [],
       "screenshots": [
         {
-          "file": "hoy",
+          "file": "today",
           "device": "mobile",
-          "alt": "Pantalla Hoy de Time Reclaimed"
+          "alt": "Pantalla Hoy de Time Reclaimed: tiempo gastado y qué podrías haber hecho con él"
+        },
+        {
+          "file": "progress",
+          "device": "mobile",
+          "alt": "Histórico de uso de Time Reclaimed en los últimos 7 días"
         }
       ],
-      "lastSyncedCommit": "58f737a83b026aceab8419bf314145c32198782e"
+      "lastSyncedCommit": "58f737a83b026aceab8419bf314145c32198782e",
+      "screenshotsNote": "Generadas con el arnés .scratch/inject.html del repo (datos de demo); no se recapturan solas."
     },
     {
       "id": "pinchazos",

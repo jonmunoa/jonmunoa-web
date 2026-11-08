@@ -1,7 +1,6 @@
 // Vuelca lab/projects.json en site/index.html, entre los marcadores
 // <!-- BUILD:FEATURED --> ... <!-- /BUILD:FEATURED -->  (sección Construyo)
 // <!-- BUILD:LAB --> ... <!-- /BUILD:LAB -->            (sección Laboratorio)
-// <!-- BUILD:LAB-STAMP --> ... <!-- /BUILD:LAB-STAMP --> (fecha de última actualización)
 // El resto de la página se edita a mano.
 
 import { readFile, writeFile } from 'node:fs/promises';
@@ -74,7 +73,7 @@ async function featuredCard(p, i) {
               <p class="project-hook">${esc(p.hook)}</p>
               <p>${esc(p.description)}</p>
               ${pipeline}
-              <div class="project-foot">${link(p)}<span class="meta">${esc(p.stack.join(' · '))}</span></div>
+              <div class="project-foot">${link(p)}</div>
             </div>
             <div class="visual">${await visual(p, 'lg')}</div>
             ${stats}
@@ -90,7 +89,7 @@ async function labCard(p) {
               <h3>${esc(p.name)}</h3>
               <p class="lab-hook">${esc(p.hook)}</p>
               <p>${esc(p.description)}</p>
-              <div class="lab-foot">${link(p)}<span class="meta">${esc(p.stack.join(' · '))}</span></div>
+              <div class="lab-foot">${link(p)}</div>
               <div class="lab-date">ACTUALIZADO · <time datetime="${esc(p.updated)}">${esc(fmtDate(p.updated).toUpperCase())}</time></div>
             </div>
           </article>`;
@@ -99,12 +98,10 @@ async function labCard(p) {
 const byUpdated = (a, b) => b.updated.localeCompare(a.updated);
 const featured = data.projects.filter((p) => p.featured).sort((a, b) => a.featured - b.featured);
 const lab = data.projects.filter((p) => !p.featured).sort(byUpdated);
-const latest = [...data.projects].sort(byUpdated)[0];
 
 const blocks = {
   FEATURED: (await Promise.all(featured.map(featuredCard))).join('') + '\n          ',
   LAB: (await Promise.all(lab.map(labCard))).join('') + '\n          ',
-  'LAB-STAMP': `<span>ÚLTIMO CAMBIO · <time datetime="${esc(latest.updated)}">${esc(fmtDate(latest.updated).toUpperCase())}</time> · ${esc(latest.name.toUpperCase())}</span>`,
 };
 
 let html = await readFile(htmlPath, 'utf8');
