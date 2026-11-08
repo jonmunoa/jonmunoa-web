@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jon Muñoa. Ingeniero de software. Pienso, construyo y automatizo soluciones. Proyectos personales con capturas y enlaces, actualizados con cada cambio.">
+  <meta name="theme-color" content="#08090b">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jon Muñoa — Ingeniería, producto y sistemas">
+  <meta property="og:description" content="El código es el medio. El valor está en la solución.">
+  <meta property="og:image" content="assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2308090b'/%3E%3Crect x='11' y='11' width='10' height='10' fill='%237df9d0'/%3E%3C/svg%3E">
+  <title>Jon Muñoa — Ingeniería, producto y sistemas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#08090b;--panel:#0d1012;--ink:#eef2f2;--muted:#99a5a3;--dim:#66716f;--line:rgba(238,242,242,.14);--accent:#7df9d0;--accent-soft:rgba(125,249,208,.08);--amber:#f5c97a;--max:1240px;--ease-out:cubic-bezier(.23,1,.32,1)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:72px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:linear-gradient(rgba(125,249,208,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(125,249,208,.04) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 50% 0,#000 18%,transparent 72%)}
+    a{color:inherit;text-decoration:none;transition:color 150ms ease} a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+    ::selection{background:var(--accent);color:var(--bg)}
+    img{max-width:100%}
+    .mono{font-family:"JetBrains Mono",monospace}.accent{color:var(--accent)}.muted{color:var(--muted)}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .eyebrow{margin:0 0 18px;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+    .section{padding:clamp(72px,9vw,132px) 0;border-top:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,440px);gap:34px;align-items:end;margin-bottom:clamp(40px,6vw,72px)}
+    h1,h2,h3,p{margin-top:0} h2{margin-bottom:0;font-size:clamp(42px,6vw,82px);line-height:.98;letter-spacing:-.05em} .lead{margin:0;color:var(--muted);font-size:clamp(17px,1.7vw,21px);line-height:1.65}
+
+    header{position:sticky;top:0;z-index:20;background:rgba(8,9,11,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(125,249,208,.2)}
+    .nav{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font:700 14px/1 "JetBrains Mono",monospace}.status-dot{width:8px;height:8px;background:var(--accent);box-shadow:0 0 14px var(--accent);animation:pulse 2.4s ease-in-out infinite}.links{display:flex;gap:clamp(12px,2.2vw,28px);font:400 12px/1 "JetBrains Mono",monospace;color:var(--muted)}.sys{font:400 12px/1 "JetBrains Mono",monospace;color:var(--dim)}
+    .menu{display:none;position:relative}.menu summary{list-style:none;cursor:pointer;padding:10px 12px;margin-right:-12px;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.1em;color:var(--accent);-webkit-tap-highlight-color:transparent;user-select:none}.menu summary::-webkit-details-marker{display:none}.menu[open] summary b{display:none}.menu summary i{display:none;font-style:normal}.menu[open] summary i{display:inline}
+    .menu-panel{position:absolute;right:-12px;top:calc(100% + 10px);width:min(240px,calc(100vw - 32px));display:grid;background:var(--panel);border:1px solid rgba(125,249,208,.3);box-shadow:0 20px 50px rgba(0,0,0,.6);transform-origin:top right;animation:menu-in 180ms var(--ease-out)}.menu-panel a{padding:15px 18px;font:400 13px/1 "JetBrains Mono",monospace;color:var(--muted)}.menu-panel a+a{border-top:1px solid var(--line)}.menu-panel a:active{background:var(--accent-soft);color:var(--accent)}
+    .progress{height:2px;background:rgba(125,249,208,.1)}.progress i{display:block;height:100%;width:100%;transform:scaleX(0);transform-origin:left;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+
+    .hero{min-height:calc(100svh - 64px);display:flex;align-items:center;padding:clamp(56px,8vw,110px) 0 64px}.hero-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.1em}.chip{border:1px solid rgba(125,249,208,.4);padding:7px 11px;color:var(--accent)}.hero h1{margin:clamp(30px,5vw,58px) 0 30px;max-width:1050px;font-size:clamp(54px,9.2vw,132px);line-height:.88;letter-spacing:-.065em;text-wrap:balance}.hero h1 span{display:block}.hero-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,430px);gap:48px;align-items:end}.hero-copy>p{margin:0;max-width:32ch;font-size:clamp(19px,2vw,27px);line-height:1.45}.manifest{border-left:1px solid var(--accent);padding-left:24px;color:var(--muted);font-size:17px;line-height:1.68}.triad{margin-top:clamp(48px,7vw,84px);display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.triad div{padding:20px 24px;display:flex;gap:15px;align-items:baseline}.triad div+div{border-left:1px solid var(--line)}.triad b{font:500 12px/1 "JetBrains Mono",monospace;color:var(--accent)}.triad span{font-size:clamp(18px,2vw,25px);font-weight:600;text-transform:uppercase}
+    .ticker{overflow:hidden;border-block:1px solid var(--line);background:var(--accent-soft)}.ticker-track{display:flex;width:max-content;padding:13px 0;animation:ticker 40s linear infinite;font:400 12px/1 "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--dim)}.ticker-track span{padding-right:42px}
+
+    .now{background:rgba(238,242,242,.018)}.now-claim{max-width:19ch;font-size:clamp(42px,6.5vw,88px);line-height:.98;letter-spacing:-.055em;font-weight:700}.now-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr);gap:clamp(40px,8vw,110px);align-items:start}.now-copy p{font-size:18px;line-height:1.72;color:var(--muted)}.now-copy .now-subclaim{margin:0 0 26px;max-width:18ch;font-size:clamp(27px,3vw,40px);line-height:1.08;letter-spacing:-.035em;font-weight:600;color:var(--ink)}.parallel{margin-top:32px;border:1px solid rgba(125,249,208,.38);background:var(--accent-soft);padding:24px}.parallel strong{font:700 clamp(42px,5vw,66px)/1 "JetBrains Mono",monospace;color:var(--accent)}.parallel span{display:block;margin-top:9px;color:#d8dfde;font-size:17px;line-height:1.5}.workflow{border-top:1px solid var(--line)}.workflow-row{display:grid;grid-template-columns:52px minmax(130px,.65fr) 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}.workflow-row>span{font:500 12px/1 "JetBrains Mono",monospace;color:var(--accent)}.workflow-row b{font-size:20px}.workflow-row em{font-style:normal;color:var(--dim);font-size:15px}.automate-note{grid-column:1/-1;margin-top:20px;padding:18px 20px;border:1px dashed rgba(125,249,208,.34);font:400 13px/1.7 "JetBrains Mono",monospace;color:var(--muted)}
+
+    /* Botones y metadatos compartidos */
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 14px;border:1px solid rgba(125,249,208,.5);font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.04em;color:var(--accent);transition:background-color 150ms ease,transform 160ms var(--ease-out);-webkit-tap-highlight-color:transparent}.btn:active{transform:scale(.97)}.btn span{transition:transform 200ms var(--ease-out)}.btn-off{display:none}
+    .visual .shot-phones .device-phone{width:min(250px,62%)}
+    .meta{font:400 11px/1.6 "JetBrains Mono",monospace;color:var(--dim);letter-spacing:.04em}
+
+    /* Capturas */
+    .shot{position:relative;width:100%}
+    .device{margin:0;overflow:hidden;background:#0a0c0e}.device img{display:block;width:100%;height:auto;object-fit:cover;object-position:top}
+    .device-browser{border:1px solid rgba(238,242,242,.16);border-radius:10px;box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}.device-browser i{display:block;height:22px;border-bottom:1px solid rgba(238,242,242,.1);background:radial-gradient(circle at 12px 50%,#3a4341 3px,transparent 3.5px),radial-gradient(circle at 24px 50%,#3a4341 3px,transparent 3.5px),radial-gradient(circle at 36px 50%,#3a4341 3px,transparent 3.5px),#121517}.device-browser img{aspect-ratio:16/10}
+    .device-phone{border:1px solid rgba(238,242,242,.22);border-radius:24px;padding:5px;background:#000;box-shadow:0 30px 60px -30px rgba(0,0,0,.95)}.device-phone img{border-radius:19px;aspect-ratio:390/780}
+    .shot-desktop.has-phone{padding:0 clamp(40px,7%,72px) 32px 0}.device-overlap{position:absolute;right:0;bottom:0;width:27%}
+    .shot-phones{display:flex;gap:16px;justify-content:center;align-items:flex-start}.shot-phones .device-phone{width:min(200px,44%)}.shot-phones .device-phone+.device-phone{margin-top:34px}
+    .shot-empty{aspect-ratio:16/10;display:grid;place-content:center;gap:12px;text-align:center;border:1px dashed rgba(125,249,208,.3);background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(125,249,208,.03) 14px 15px)}.shot-empty span{font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.12em;color:var(--dim);text-transform:uppercase}.shot-empty b{font-size:clamp(26px,3vw,36px);letter-spacing:-.03em;color:var(--muted)}
+
+    /* Construyo */
+    .projects{display:grid;gap:20px}.project{position:relative;overflow:hidden;border:1px solid var(--line);background:rgba(238,242,242,.02);display:grid;grid-template-columns:minmax(280px,.8fr) minmax(440px,1.2fr)}.project-copy{padding:clamp(28px,4vw,50px);display:flex;flex-direction:column}.project-top{display:flex;justify-content:space-between;gap:16px;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.1em;color:var(--accent)}.project h3{margin:22px 0 12px;font-size:clamp(36px,4.6vw,62px);line-height:.95;letter-spacing:-.05em}.project .project-hook{margin:0 0 22px;color:var(--ink);font-size:clamp(20px,2.2vw,27px);line-height:1.25;font-weight:500;letter-spacing:-.025em}.project p{margin:0;color:var(--muted);font-size:18px;line-height:1.65}.project-foot{margin-top:auto;padding-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
+    .visual{min-height:330px;border-left:1px solid var(--line);padding:clamp(26px,4vw,50px);display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(125,249,208,.055),transparent 60%)}
+    .pipeline{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 24px}.pipeline li{position:relative;border:1px solid rgba(125,249,208,.3);padding:8px 10px;font:500 11px/1 "JetBrains Mono",monospace;color:#cbd5d3}.pipeline li:not(:last-child)::after{content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);color:var(--accent)}
+    .stats{grid-column:1/-1;display:flex;gap:clamp(25px,5vw,64px);flex-wrap:wrap;padding:24px clamp(28px,4vw,50px);border-top:1px solid rgba(125,249,208,.25);background:rgba(125,249,208,.035)}.stat b{display:block;font:700 clamp(28px,3vw,42px)/1 "JetBrains Mono",monospace;color:var(--accent)}.stat span{display:block;margin-top:7px;font:400 11px/1 "JetBrains Mono",monospace;color:var(--dim);letter-spacing:.09em}
+
+    /* Laboratorio */
+    .lab{background:rgba(238,242,242,.018)}.lab-stamp{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 20px;padding-bottom:18px;margin-bottom:20px;border-bottom:1px solid var(--line);font:500 11px/1.4 "JetBrains Mono",monospace;letter-spacing:.12em;color:var(--dim)}.lab-stamp b{font-weight:500;color:var(--accent)}
+    .lab-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .lab-card{display:flex;flex-direction:column;border:1px solid var(--line);background:var(--bg);transition:border-color 200ms ease}.lab-card>.shot{padding:clamp(22px,3vw,34px);border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(125,249,208,.05),transparent 65%)}.lab-card>.shot-phones .device-phone{width:min(170px,40%)}.lab-card>.shot-empty{border:0;border-bottom:1px solid var(--line);aspect-ratio:auto;min-height:280px}
+    .lab-body{padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;flex:1}.lab-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.1em;color:var(--accent)}.lab-card h3{margin:18px 0 8px;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-.04em}.lab-hook{margin:0 0 14px;font-size:19px;line-height:1.35;font-weight:500;letter-spacing:-.015em}.lab-body>p:not(.lab-hook){margin:0;color:var(--muted);font-size:16px;line-height:1.65}.lab-foot{margin-top:auto;padding-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}.lab-date{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font:400 10px/1 "JetBrains Mono",monospace;letter-spacing:.12em;color:var(--dim)}
+    .status{padding:5px 8px;border:1px solid currentColor;font:500 10px/1 "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase}.status-activo{color:var(--accent)}.status-en-desarrollo{color:var(--amber)}.status-uso-personal{color:var(--muted)}.status-pausado,.status-archivado{color:var(--dim)}
+    .archive{margin-top:clamp(56px,7vw,88px)}.archive-title{display:flex;justify-content:space-between;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line);font:500 12px/1 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.12em}.archive-list{display:grid;grid-template-columns:repeat(3,1fr);gap:0 32px}.archive-item{padding:24px 0;border-bottom:1px solid var(--line)}.archive-item time{display:block;margin-bottom:12px;font:500 12px/1.4 "JetBrains Mono",monospace;color:var(--accent)}.archive-item h3{margin:0 0 8px;font-size:21px}.archive-item p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}.archive-tag{display:inline-block;margin-top:11px;font:400 11px/1 "JetBrains Mono",monospace;color:var(--dim)}
+
+    /* Trayectoria */
+    .career-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:20px}.current{border:1px solid var(--accent);background:var(--accent-soft);padding:clamp(30px,4vw,52px)}.current-label{display:flex;justify-content:space-between;gap:20px;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.11em;color:var(--accent)}.current h3{margin:26px 0 8px;font-size:clamp(44px,6vw,74px);line-height:1;letter-spacing:-.055em}.role{font:500 14px/1.4 "JetBrains Mono",monospace;color:#cbd5d3}.current-copy{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.current-copy p{margin:0;color:var(--muted);font-size:17px;line-height:1.68}.stack{margin-top:30px;padding-top:20px;border-top:1px solid rgba(125,249,208,.3);font:400 12px/1.9 "JetBrains Mono",monospace;color:var(--accent)}.before{border:1px solid var(--line);padding:clamp(30px,4vw,44px)}.before-head{font:500 12px/1 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.11em}.before h3{margin:24px 0 14px;font-size:clamp(32px,4vw,48px);line-height:1.05}.before>p{color:var(--muted);font-size:16px;line-height:1.65}.company{display:grid;grid-template-columns:1fr auto;gap:12px;padding:17px 0;border-top:1px solid var(--line)}.company b{font-size:19px}.company span{font:400 11px/1.4 "JetBrains Mono",monospace;color:var(--dim);text-align:right}
+
+    /* Sobre mí */
+    .about{background:rgba(238,242,242,.018)}.about-grid{display:grid;grid-template-columns:minmax(300px,.8fr) minmax(0,1.2fr);gap:clamp(40px,8vw,110px);align-items:start}.portrait{margin:0;aspect-ratio:4/5;border:1px solid rgba(125,249,208,.4);position:relative;overflow:hidden;background:#111517}.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 42%;filter:saturate(.86) contrast(1.04)}.portrait figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(transparent,rgba(8,9,11,.9));font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.1em;color:var(--accent)}.about-copy h3{margin:0 0 24px;max-width:14ch;font-size:clamp(40px,5vw,68px);line-height:1;letter-spacing:-.045em}.about-copy>p{max-width:48ch;color:var(--muted);font-size:19px;line-height:1.7}.sport-week{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.sport-week div{padding:18px}.sport-week div+div{border-left:1px solid var(--line)}.sport-week b{display:block;font:500 11px/1 "JetBrains Mono",monospace;color:var(--accent);margin-bottom:9px}.values{margin-top:42px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.value{padding-top:16px;border-top:2px solid var(--accent)}.value b{display:block;font:700 15px/1 "JetBrains Mono",monospace;color:var(--ink)}.value p{margin:10px 0 0;color:var(--dim);font-size:14px;line-height:1.55}
+    .contact{margin-top:42px;padding:24px;border:1px solid rgba(125,249,208,.38);background:var(--accent-soft);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}.contact p{margin:0;font-size:20px;font-weight:600;letter-spacing:-.02em}.contact-links{display:flex;flex-wrap:wrap;gap:10px}
+
+    footer{border-top:1px solid rgba(125,249,208,.25)}.footer{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;font:400 12px/1 "JetBrains Mono",monospace;color:var(--dim)}.footer b{color:var(--ink)}.footer a{color:var(--accent)}
+
+    @media(hover:hover) and (pointer:fine){.links a:hover,.footer a:hover{color:var(--accent)}.btn:hover{background:var(--accent-soft)}.btn:hover span{transform:translate(2px,-2px)}.btn-off:hover{background:none}.lab-card:hover{border-color:rgba(125,249,208,.4)}.menu-panel a:hover{background:var(--accent-soft);color:var(--accent)}}
+    @keyframes pulse{50%{opacity:.35;transform:scale(.7)}}@keyframes ticker{to{transform:translateX(-50%)}}@keyframes menu-in{from{opacity:0;transform:scale(.96) translateY(-4px)}}
+    @media(max-width:900px){.links{display:none}.menu{display:block}.hero-copy,.section-head,.now-grid,.project,.career-grid,.about-grid,.lab-list{grid-template-columns:1fr}.hero h1{font-size:clamp(51px,13vw,92px)}.visual{border-left:0;border-top:1px solid var(--line);min-height:0}.current-copy{grid-template-columns:1fr}.portrait{width:min(100%,520px);order:2}.archive-list{grid-template-columns:1fr}}
+    @media(max-width:620px){.wrap{width:min(var(--max),calc(100% - 32px))}.sys{display:none}.hero{min-height:auto}.hero-copy{gap:28px}.triad{grid-template-columns:1fr}.triad div+div{border-left:0;border-top:1px solid var(--line)}.workflow-row{grid-template-columns:38px 1fr}.workflow-row em{grid-column:2}.stats{gap:24px}.sport-week,.values{grid-template-columns:1fr}.sport-week div+div{border-left:0;border-top:1px solid var(--line)}.contact{flex-direction:column;align-items:flex-start}.pipeline{flex-direction:column;align-items:flex-start;gap:18px}.pipeline li:not(:last-child)::after{content:"↓";right:auto;left:14px;top:calc(100% + 1px);transform:none;line-height:16px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.status-dot,.ticker-track{animation:none}.menu-panel{animation:none}.btn,.btn span{transition:background-color 150ms ease}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio"><i class="status-dot" aria-hidden="true"></i>JON_MUÑOA</a>
+      <nav class="links" aria-label="Navegación principal"><a href="#ahora">/ahora</a><a href="#construyo">/construyo</a><a href="#laboratorio">/laboratorio</a><a href="#trayectoria">/trayectoria</a><a href="#sobre-mi">/sobre-mi</a></nav>
+      <span class="sys">SYS · 2026</span>
+      <details class="menu">
+        <summary aria-label="Menú"><b>MENÚ</b><i>CERRAR</i></summary>
+        <nav class="menu-panel" aria-label="Navegación móvil"><a href="#ahora">/ahora</a><a href="#construyo">/construyo</a><a href="#laboratorio">/laboratorio</a><a href="#trayectoria">/trayectoria</a><a href="#sobre-mi">/sobre-mi</a></nav>
+      </details>
+    </div>
+    <div class="progress" aria-hidden="true"><i id="scroll-progress"></i></div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-meta"><span class="chip">INGENIERO DE SOFTWARE</span><span class="muted">DESDE 2013 · SISTEMA ACTIVO</span></div>
+        <h1><span>El código es el medio.</span><span class="accent">El valor está en la solución.</span></h1>
+        <div class="hero-copy">
+          <p>Entender el problema. Diseñar qué merece la pena construir. Convertirlo en algo que funciona.</p>
+          <div class="manifest">La IA ha desplazado mi trabajo hacia donde más valor aporta: entender problemas, diseñar soluciones, dirigir la construcción y validar resultados.</div>
+        </div>
+        <div class="triad" aria-label="Principios"><div><b>01</b><span>Pienso</span></div><div><b>02</b><span>Construyo</span></div><div><b>03</b><span>Automatizo</span></div></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>PROBLEMA — CONTEXTO — DECISIÓN — AGENTES — REVISIÓN HUMANA — VALIDACIÓN FUNCIONAL — PRODUCTO —</span><span>PROBLEMA — CONTEXTO — DECISIÓN — AGENTES — REVISIÓN HUMANA — VALIDACIÓN FUNCIONAL — PRODUCTO —</span></div></div>
+
+    <section class="section now" id="ahora">
+      <div class="wrap">
+        <p class="eyebrow">01 · AHORA / INGENIERÍA CON IA</p>
+        <p class="now-claim">El código se ha abaratado. <span class="accent">Las buenas decisiones no.</span></p>
+        <div class="now-grid">
+          <div class="now-copy">
+            <p class="now-subclaim">Construyo más soluciones. <span class="accent">Escribo menos código.</span></p>
+            <p>Generar software ya no es el principal cuello de botella. El trabajo está en entender el problema, decidir qué merece la pena construir, dirigir la ejecución y demostrar que el resultado funciona.</p>
+            <p>Claude Code y Codex investigan e implementan. Herramientas propias automatizan la preparación de cada tarea; yo reviso el código y valido el resultado funcional. Hasta esta web se actualiza sola cuando cambia uno de mis proyectos.</p>
+            <div class="parallel"><strong>4—5</strong><span>líneas de trabajo simultáneas entre investigación e implementación.</span></div>
+          </div>
+          <div class="workflow" aria-label="Flujo de trabajo actual">
+            <div class="workflow-row"><span>01</span><b>Entender</b><em>problema, contexto y valor</em></div>
+            <div class="workflow-row"><span>02</span><b>Diseñar</b><em>solución y plan junto a IA</em></div>
+            <div class="workflow-row"><span>03</span><b>Dirigir</b><em>investigación e implementación con agentes</em></div>
+            <div class="workflow-row"><span>04</span><b>Revisar</b><em>código y decisiones técnicas</em></div>
+            <div class="workflow-row"><span>05</span><b>Validar</b><em>resultado visual o de proceso</em></div>
+            <div class="automate-note">PREPARACIÓN AUTOMÁTICA → DESPLIEGUE DE PRUEBAS / CI·CD → VALIDACIÓN HUMANA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="construyo">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">02 · CONSTRUYO</p><h2>Problemas convertidos en sistemas.</h2></div><p class="lead">Tres proyectos en uso real, con su enlace y capturas de cómo son hoy.</p></div>
+        <div class="projects">
+          <!-- BUILD:FEATURED -->
+          <article class="project" id="p-bot-ofertas">
+            <div class="project-copy">
+              <div class="project-top"><span>PROYECTO / 01</span><span>AUTOMATIZACIÓN</span></div>
+              <h3>Bot ofertas afiliados</h3>
+              <p class="project-hook">De las APIs al canal, sin trabajo manual.</p>
+              <p>Un motor que consulta Amazon, AliExpress y Temu, detecta ofertas por nicho, genera el enlace de afiliación y publica solo en Telegram y WhatsApp. Las ofertas de pañales ya salen como tarjeta con imagen.</p>
+              <ol class="pipeline" aria-label="Flujo"><li>Amazon · AliExpress · Temu</li><li>Detección por nicho</li><li>Enlace de afiliación</li><li>Telegram · WhatsApp</li></ol>
+              <div class="project-foot"><a class="btn" href="https://t.me/ofertasdepanales" target="_blank" rel="noopener">Ver un canal<span aria-hidden="true">↗</span></a><span class="meta">.NET · GitHub Actions · Telegram · WhatsApp</span></div>
+            </div>
+            <div class="visual"><div class="shot shot-phones"><figure class="device device-phone"><img src="assets/lab/bot-ofertas/canal.webp" alt="Canal de Telegram de ofertas de pañales con las publicaciones del bot" width="780" height="1688" loading="lazy" decoding="async" sizes="200px"></figure></div></div>
+            <div class="stats"><div class="stat"><b>10</b><span>CANALES</span></div><div class="stat"><b>+1.000</b><span>USUARIOS</span></div><div class="stat"><b>~500 €</b><span>AL AÑO</span></div></div>
+          </article>
+          <article class="project" id="p-kitmaternidad">
+            <div class="project-copy">
+              <div class="project-top"><span>PROYECTO / 02</span><span>WEB · AFILIACIÓN</span></div>
+              <h3>Kit Maternidad</h3>
+              <p class="project-hook">Lo justo para la llegada del bebé, sin humo.</p>
+              <p>Listas cerradas por escenario para futuros padres en España: qué es imprescindible, qué es útil y qué depende. Checklist marcable, carrito de Amazon en un clic, test, calculadora y guías con fuentes oficiales.</p>
+              
+              <div class="project-foot"><a class="btn" href="https://kitmaternidad.com" target="_blank" rel="noopener">kitmaternidad.com<span aria-hidden="true">↗</span></a><span class="meta">Astro · Vercel · Amazon Afiliados · SEO</span></div>
+            </div>
+            <div class="visual"><div class="shot shot-desktop has-phone"><figure class="device device-browser"><i aria-hidden="true"></i><img src="assets/lab/kitmaternidad/home.webp" alt="Portada de kitmaternidad.com" width="1440" height="900" loading="lazy" decoding="async" sizes="(max-width: 900px) 92vw, 640px"></figure><figure class="device device-phone device-overlap"><img src="assets/lab/kitmaternidad/home-movil.webp" alt="Portada de kitmaternidad.com en el móvil" width="780" height="1688" loading="lazy" decoding="async" sizes="160px"></figure></div></div>
+            
+          </article>
+          <article class="project" id="p-personal-fit">
+            <div class="project-copy">
+              <div class="project-top"><span>PROYECTO / 03</span><span>ENTRENAMIENTO</span></div>
+              <h3>Personal Fit Tracker</h3>
+              <p class="project-hook">Registrar no es decidir.</p>
+              <p>Garmin aporta el histórico de running, bici, gimnasio y natación. Mis objetivos dan contexto. La IA convierte ambos en una planificación mensual que uso para entrenar, y cada actividad se puede compartir como un vídeo de la ruta.</p>
+              
+              <div class="project-foot"><a class="btn" href="https://jonmunoafit.netlify.app/resumen" target="_blank" rel="noopener">jonmunoafit.netlify.app<span aria-hidden="true">↗</span></a><span class="meta">Next.js · Netlify · Garmin · IA</span></div>
+            </div>
+            <div class="visual"><div class="shot shot-desktop has-phone"><figure class="device device-browser"><i aria-hidden="true"></i><img src="assets/lab/personal-fit/resumen.webp" alt="Resumen de entrenamiento de Personal Fit Tracker" width="1440" height="900" loading="lazy" decoding="async" sizes="(max-width: 900px) 92vw, 640px"></figure><figure class="device device-phone device-overlap"><img src="assets/lab/personal-fit/resumen-movil.webp" alt="Resumen de entrenamiento en el móvil" width="780" height="1688" loading="lazy" decoding="async" sizes="160px"></figure></div></div>
+            
+          </article>
+          <!-- /BUILD:FEATURED -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section lab" id="laboratorio">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">03 · LABORATORIO</p><h2>Lo que construyo ahora.</h2></div><p class="lead">Proyectos personales que hago con Claude Code. Esta sección se actualiza sola cada vez que uno de ellos cambia.</p></div>
+        <div class="lab-stamp"><b>SINCRONIZADO CON MIS REPOSITORIOS</b><!-- BUILD:LAB-STAMP --><span>ÚLTIMO CAMBIO · <time datetime="2026-11-07">7 NOV 2026</time> · DOSIFY</span><!-- /BUILD:LAB-STAMP --></div>
+        <div class="lab-list">
+          <!-- BUILD:LAB -->
+          <article class="lab-card" id="p-dosify">
+            <div class="shot shot-phones"><figure class="device device-phone"><img src="assets/lab/dosify/hoy.webp" alt="Pantalla Hoy de Dosify" width="780" height="1733" loading="lazy" decoding="async" sizes="200px"></figure><figure class="device device-phone"><img src="assets/lab/dosify/registrar.webp" alt="Registrar una toma en Dosify" width="780" height="1733" loading="lazy" decoding="async" sizes="200px"></figure></div>
+            <div class="lab-body">
+              <div class="lab-meta"><span>APP ANDROID</span><span class="status status-en-desarrollo">en desarrollo</span></div>
+              <h3>Dosify</h3>
+              <p class="lab-hook">Cuándo y cuánto, sin cuentas ni Internet.</p>
+              <p>Registra las tomas de medicamentos por dosis o por pastillas, con informes de lo tomado frente a lo previsto. Todo se queda en el móvil. La versión 1.0 está preparada para Google Play.</p>
+              <div class="lab-foot"><span class="btn btn-off">Sin web pública</span><span class="meta">Kotlin · Jetpack Compose · Room</span></div>
+              <div class="lab-date">ACTUALIZADO · <time datetime="2026-11-07">7 NOV 2026</time></div>
+            </div>
+          </article>
+          <article class="lab-card" id="p-pinchazos">
+            <div class="shot shot-empty" aria-hidden="true"><span>App Android</span><b>Capturas en camino</b></div>
+            <div class="lab-body">
+              <div class="lab-meta"><span>APP ANDROID</span><span class="status status-uso-personal">uso personal</span></div>
+              <h3>Pinchazos</h3>
+              <p class="lab-hook">Cada pinchazo de insulina, en dos toques.</p>
+              <p>Registra cuándo y cuánta insulina, con varias insulinas, informes por momento del día y exportación a CSV. Sin cuentas ni Internet. Fue el origen de Dosify.</p>
+              <div class="lab-foot"><span class="btn btn-off">Sin web pública</span><span class="meta">Kotlin · Jetpack Compose · Room</span></div>
+              <div class="lab-date">ACTUALIZADO · <time datetime="2026-10-31">31 OCT 2026</time></div>
+            </div>
+          </article>
+          <article class="lab-card" id="p-gold-silver">
+            <div class="shot shot-desktop"><figure class="device device-browser"><i aria-hidden="true"></i><img src="assets/lab/gold-silver/panel.webp" alt="Panel web de Gold/Silver Monitor con el gráfico del ratio y el RSI" width="1440" height="900" loading="lazy" decoding="async" sizes="(max-width: 900px) 92vw, 560px"></figure></div>
+            <div class="lab-body">
+              <div class="lab-meta"><span>BOT · MERCADOS</span><span class="status status-activo">activo</span></div>
+              <h3>Gold/Silver Monitor</h3>
+              <p class="lab-hook">Señales sobre el ratio oro/plata.</p>
+              <p>Analiza el ratio XAU/XAG con RSI en cuatro temporalidades, detecta toques de zona, divergencias y confluencia, y avisa por Telegram. Incluye panel web con gráfico, historial de señales y simulador de resultados.</p>
+              <div class="lab-foot"><a class="btn" href="https://goldsilver-bot.netlify.app/" target="_blank" rel="noopener">goldsilver-bot.netlify.app<span aria-hidden="true">↗</span></a><span class="meta">Python · FastAPI · Telegram · Netlify</span></div>
+              <div class="lab-date">ACTUALIZADO · <time datetime="2026-10-25">25 OCT 2026</time></div>
+            </div>
+          </article>
+          <article class="lab-card" id="p-time-reclaimed">
+            <div class="shot shot-phones"><figure class="device device-phone"><img src="assets/lab/time-reclaimed/hoy.webp" alt="Pantalla Hoy de Time Reclaimed" width="780" height="1688" loading="lazy" decoding="async" sizes="200px"></figure></div>
+            <div class="lab-body">
+              <div class="lab-meta"><span>APP ANDROID</span><span class="status status-uso-personal">uso personal</span></div>
+              <h3>Time Reclaimed</h3>
+              <p class="lab-hook">Entender dónde se va mi atención.</p>
+              <p>Registra el uso de redes sociales, resume cada mañana el día anterior y muestra insights por aplicación y franja horaria. Va por la versión 2.3.</p>
+              <div class="lab-foot"><span class="btn btn-off">Sin web pública</span><span class="meta">.NET Android · WebView</span></div>
+              <div class="lab-date">ACTUALIZADO · <time datetime="2026-09-09">9 SEPT 2026</time></div>
+            </div>
+          </article>
+          <!-- /BUILD:LAB -->
+        </div>
+
+        <div class="archive">
+          <div class="archive-title"><span>ARCHIVO</span><span>2016 → 2024</span></div>
+          <div class="archive-list">
+            <article class="archive-item"><time>2016</time><h3>Blog y repositorios .NET</h3><p>Notas y pequeñas pruebas públicas sobre Quartz, Swagger, log4net, inyección de dependencias, patrones y extensiones.</p><span class="archive-tag">ARCHIVO TÉCNICO</span></article>
+            <article class="archive-item"><time>2020</time><h3>Detector ML de test de embarazo</h3><p>Aplicación .NET que interpretaba una fotografía mediante machine learning. Estuvo publicada; hoy está retirada.</p><span class="archive-tag">PUBLICADO → RETIRADO</span></article>
+            <article class="archive-item"><time>~4 AÑOS</time><h3>Penique / Sorare</h3><p>Vídeos sobre creación de equipos, fichajes, jugadores y estrategias para ganar dinero en Sorare.</p><span class="archive-tag">~2.000 SUSCRIPTORES</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trayectoria">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">04 · TRAYECTORIA</p><h2>Ahora tiene más peso que antes.</h2></div><p class="lead">La experiencia da contexto. La forma actual de resolver problemas define el siguiente paso.</p></div>
+        <div class="career-grid">
+          <article class="current"><div class="current-label"><span>AHORA / 2022—ACTUALIDAD</span><span>FOREWORTH</span></div><h3>Foreworth</h3><div class="role">INGENIERO DE SOFTWARE · FULL-STACK CON FOCO BACKEND / DATOS</div><div class="current-copy"><p>Trabajo en una plataforma que analiza código fuente y transforma la información extraída en KPIs para clientes. Me responsabilizo de decisiones técnicas y soluciones junto al CTO.</p><p>Optimizo memoria, consultas y procesos; reorganizar flujos ha permitido ahorrar horas y días de ejecución, mejorando eficiencia, coste y fiabilidad de los datos.</p></div><div class="stack">.NET · HANGFIRE · MYSQL · ANGULAR · ATHENA · LAMBDA · GLUE · S3 · ECS · CLOUDWATCH</div></article>
+          <article class="before"><div class="before-head">ANTES / 2013—2022</div><h3>Una década aprendiendo a construir.</h3><p>Backend, frontend, bases de datos, APIs, integraciones, sistemas internos y liderazgo técnico.</p><div class="company"><b>BQ</b><span>03/2013—04/2017<br>INGENIERO DE SOFTWARE</span></div><div class="company"><b>VASS</b><span>04/2017—11/2017<br>ANALISTA DE SOFTWARE</span></div><div class="company"><b>Quodem</b><span>11/2017—03/2022<br>TECHNICAL LEAD</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre-mi">
+      <div class="wrap">
+        <p class="eyebrow">05 · SOBRE MÍ</p>
+        <div class="about-grid">
+          <figure class="portrait"><img src="assets/jon-munoa.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Jon Muñoa después de una carrera, con ropa deportiva y su dorsal"><figcaption>JON / FUERA DE LA PANTALLA</figcaption></figure>
+          <div class="about-copy">
+            <h3>Fuera de la pantalla.</h3>
+            <p>El deporte ocupa una parte importante de mi semana. El resto del tiempo lo reparto entre mi familia y proyectos personales, sin separar demasiado la curiosidad de las ganas de construir.</p>
+            <div class="sport-week"><div><b>SEMANAL</b>Running</div><div><b>MÍNIMO 2×</b>Fuerza</div><div><b>DOMINGOS</b>Bici</div></div>
+            <div class="values"><div class="value"><b>ACTITUD</b><p>Buscar cómo resolverlo.</p></div><div class="value"><b>EJEMPLO</b><p>Hacer antes que decir.</p></div><div class="value"><b>ESFUERZO</b><p>Las herramientas cambian. El compromiso, no.</p></div></div>
+            <div class="contact" id="contacto"><p>¿Hablamos?</p><div class="contact-links"><a class="btn" href="https://github.com/jonmunoa" target="_blank" rel="noopener">GitHub<span aria-hidden="true">↗</span></a></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer"><b>JON_MUÑOA</b><span>PIENSO · CONSTRUYO · AUTOMATIZO</span><a href="https://github.com/jonmunoa" target="_blank" rel="noopener">GITHUB ↗</a><a href="#inicio">↑ VOLVER ARRIBA</a></div></footer>
+  <script>
+    const progress=document.getElementById('scroll-progress');
+    const updateProgress=()=>{const root=document.documentElement;const max=root.scrollHeight-root.clientHeight;progress.style.transform='scaleX('+(max?Math.min(1,root.scrollTop/max):0)+')'};
+    addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);updateProgress();
+    const menu=document.querySelector('.menu');
+    menu.addEventListener('click',e=>{if(e.target.closest('.menu-panel a'))menu.open=false});
+    document.addEventListener('click',e=>{if(menu.open&&!menu.contains(e.target))menu.open=false});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.open){menu.open=false;menu.querySelector('summary').focus()}});
+  </script>
+</body>
+</html>

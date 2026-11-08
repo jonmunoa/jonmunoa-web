@@ -1,0 +1,307 @@
+{
+  "$comment": "Fuente de verdad de los proyectos de la web. La mantiene la skill actualizar-web; scripts/build.mjs la vuelca en site/index.html. 'repo' es owner/nombre en GitHub y sirve para reconocer el proyecto desde su carpeta. 'ignored' son repos que Jon ha decidido no publicar.",
+  "projects": [
+    {
+      "id": "bot-ofertas",
+      "repo": "jonmunoa/telegramofertas",
+      "name": "Bot ofertas afiliados",
+      "featured": 1,
+      "category": "Automatización",
+      "status": "activo",
+      "hook": "De las APIs al canal, sin trabajo manual.",
+      "description": "Un motor que consulta Amazon, AliExpress y Temu, detecta ofertas por nicho, genera el enlace de afiliación y publica solo en Telegram y WhatsApp. Las ofertas de pañales ya salen como tarjeta con imagen.",
+      "stack": [
+        ".NET",
+        "GitHub Actions",
+        "Telegram",
+        "WhatsApp"
+      ],
+      "url": "https://t.me/ofertasdepanales",
+      "urlLabel": "Ver un canal",
+      "stats": [
+        {
+          "value": "10",
+          "label": "Canales"
+        },
+        {
+          "value": "+1.000",
+          "label": "Usuarios"
+        },
+        {
+          "value": "~500 €",
+          "label": "Al año"
+        }
+      ],
+      "started": "2023-09",
+      "updated": "2026-11-04",
+      "captures": [
+        {
+          "file": "canal",
+          "url": "https://t.me/s/ofertasdepanales",
+          "device": "mobile",
+          "wait": 2000
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "canal",
+          "device": "mobile",
+          "alt": "Canal de Telegram de ofertas de pañales con las publicaciones del bot"
+        }
+      ],
+      "lastSyncedCommit": "14be0da8c4bd9eda9ae8205be64a1a024d18df40",
+      "pipeline": [
+        "Amazon · AliExpress · Temu",
+        "Detección por nicho",
+        "Enlace de afiliación",
+        "Telegram · WhatsApp"
+      ]
+    },
+    {
+      "id": "kitmaternidad",
+      "repo": "jonmunoa/kitmaternidad",
+      "name": "Kit Maternidad",
+      "featured": 2,
+      "category": "Web · afiliación",
+      "status": "activo",
+      "hook": "Lo justo para la llegada del bebé, sin humo.",
+      "description": "Listas cerradas por escenario para futuros padres en España: qué es imprescindible, qué es útil y qué depende. Checklist marcable, carrito de Amazon en un clic, test, calculadora y guías con fuentes oficiales.",
+      "stack": [
+        "Astro",
+        "Vercel",
+        "Amazon Afiliados",
+        "SEO"
+      ],
+      "url": "https://kitmaternidad.com",
+      "urlLabel": "kitmaternidad.com",
+      "started": "2026-10",
+      "updated": "2026-10-29",
+      "captures": [
+        {
+          "file": "home",
+          "url": "https://kitmaternidad.com",
+          "device": "desktop"
+        },
+        {
+          "file": "home-movil",
+          "url": "https://kitmaternidad.com",
+          "device": "mobile"
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "home",
+          "device": "desktop",
+          "alt": "Portada de kitmaternidad.com"
+        },
+        {
+          "file": "home-movil",
+          "device": "mobile",
+          "alt": "Portada de kitmaternidad.com en el móvil"
+        }
+      ],
+      "lastSyncedCommit": "ab0fcbc7654618ed329d65fa1fa7b6a46b512cb4"
+    },
+    {
+      "id": "personal-fit",
+      "repo": "jonmunoa/garminapp",
+      "name": "Personal Fit Tracker",
+      "featured": 3,
+      "category": "Entrenamiento",
+      "status": "activo",
+      "hook": "Registrar no es decidir.",
+      "description": "Garmin aporta el histórico de running, bici, gimnasio y natación. Mis objetivos dan contexto. La IA convierte ambos en una planificación mensual que uso para entrenar, y cada actividad se puede compartir como un vídeo de la ruta.",
+      "stack": [
+        "Next.js",
+        "Netlify",
+        "Garmin",
+        "IA"
+      ],
+      "url": "https://jonmunoafit.netlify.app/resumen",
+      "urlLabel": "jonmunoafit.netlify.app",
+      "started": "2026-08",
+      "updated": "2026-11-01",
+      "captures": [
+        {
+          "file": "resumen",
+          "url": "https://jonmunoafit.netlify.app/resumen",
+          "device": "desktop",
+          "wait": 2500,
+          "hide": [
+            "iframe",
+            "[class*=netlify]",
+            "[id*=netlify]"
+          ]
+        },
+        {
+          "file": "resumen-movil",
+          "url": "https://jonmunoafit.netlify.app/resumen",
+          "device": "mobile",
+          "wait": 2500,
+          "hide": [
+            "iframe",
+            "[class*=netlify]",
+            "[id*=netlify]"
+          ]
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "resumen",
+          "device": "desktop",
+          "alt": "Resumen de entrenamiento de Personal Fit Tracker"
+        },
+        {
+          "file": "resumen-movil",
+          "device": "mobile",
+          "alt": "Resumen de entrenamiento en el móvil"
+        }
+      ],
+      "lastSyncedCommit": "7bcd6b4dfedc80b0cead88ebbdebbb7f45fbee4e"
+    },
+    {
+      "id": "dosify",
+      "repo": "jonmunoa/dosify",
+      "name": "Dosify",
+      "category": "App Android",
+      "status": "en desarrollo",
+      "hook": "Cuándo y cuánto, sin cuentas ni Internet.",
+      "description": "Registra las tomas de medicamentos por dosis o por pastillas, con informes de lo tomado frente a lo previsto. Todo se queda en el móvil. La versión 1.0 está preparada para Google Play.",
+      "stack": [
+        "Kotlin",
+        "Jetpack Compose",
+        "Room"
+      ],
+      "started": "2026-10",
+      "updated": "2026-11-07",
+      "captures": [
+        {
+          "file": "hoy",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Pinchazos/docs/capturas/1-hoy.png",
+          "device": "mobile"
+        },
+        {
+          "file": "registrar",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Pinchazos/docs/capturas/4-registrar.png",
+          "device": "mobile"
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "hoy",
+          "device": "mobile",
+          "alt": "Pantalla Hoy de Dosify"
+        },
+        {
+          "file": "registrar",
+          "device": "mobile",
+          "alt": "Registrar una toma en Dosify"
+        }
+      ],
+      "lastSyncedCommit": "99a2183500a84a9fc738c6018ddb584d027f12e8"
+    },
+    {
+      "id": "gold-silver",
+      "repo": "jonmunoa/gold-silver-bot",
+      "name": "Gold/Silver Monitor",
+      "category": "Bot · mercados",
+      "status": "activo",
+      "hook": "Señales sobre el ratio oro/plata.",
+      "description": "Analiza el ratio XAU/XAG con RSI en cuatro temporalidades, detecta toques de zona, divergencias y confluencia, y avisa por Telegram. Incluye panel web con gráfico, historial de señales y simulador de resultados.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Telegram",
+        "Netlify"
+      ],
+      "url": "https://goldsilver-bot.netlify.app/",
+      "urlLabel": "goldsilver-bot.netlify.app",
+      "started": "2026-09",
+      "updated": "2026-10-25",
+      "captures": [
+        {
+          "file": "panel",
+          "url": "https://goldsilver-bot.netlify.app/",
+          "device": "desktop",
+          "wait": 2500,
+          "hide": [
+            "iframe",
+            "[class*=netlify]",
+            "[id*=netlify]"
+          ]
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "panel",
+          "device": "desktop",
+          "alt": "Panel web de Gold/Silver Monitor con el gráfico del ratio y el RSI"
+        }
+      ],
+      "lastSyncedCommit": "825089372ae523e0e3a2489eade510eff4e766e3"
+    },
+    {
+      "id": "time-reclaimed",
+      "repo": "jonmunoa/dopamine-tracker",
+      "name": "Time Reclaimed",
+      "category": "App Android",
+      "status": "uso personal",
+      "hook": "Entender dónde se va mi atención.",
+      "description": "Registra el uso de redes sociales, resume cada mañana el día anterior y muestra insights por aplicación y franja horaria. Va por la versión 2.3.",
+      "stack": [
+        ".NET Android",
+        "WebView"
+      ],
+      "started": "2026-09",
+      "updated": "2026-09-09",
+      "captures": [
+        {
+          "file": "hoy",
+          "url": "file:///C:/Users/JonMunoaGutierrez/source/repos/Dopamine%20Tracker/Assets/index.html",
+          "device": "mobile",
+          "colorScheme": "dark"
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "hoy",
+          "device": "mobile",
+          "alt": "Pantalla Hoy de Time Reclaimed"
+        }
+      ],
+      "lastSyncedCommit": "58f737a83b026aceab8419bf314145c32198782e"
+    },
+    {
+      "id": "pinchazos",
+      "repo": "jonmunoa/pinchazos-diabetes",
+      "name": "Pinchazos",
+      "category": "App Android",
+      "status": "uso personal",
+      "hook": "Cada pinchazo de insulina, en dos toques.",
+      "description": "Registra cuándo y cuánta insulina, con varias insulinas, informes por momento del día y exportación a CSV. Sin cuentas ni Internet. Fue el origen de Dosify.",
+      "stack": [
+        "Kotlin",
+        "Jetpack Compose",
+        "Room"
+      ],
+      "started": "2026-10",
+      "updated": "2026-10-31",
+      "captures": [],
+      "screenshots": [],
+      "lastSyncedCommit": "ad2c20ac7af8b0d97bce99c31ae16c4e4a4372ad"
+    }
+  ],
+  "ignored": [
+    "jonmunoa/jonmunoa-web",
+    "jonmunoa/Dashboard-Finanzas",
+    "jonmunoa/crypto-dashboard",
+    "jonmunoa/commit_rules_levels",
+    "jonmunoa/large_files"
+  ],
+  "ignoredFolders": [
+    "polymarket-sports-bot",
+    "gatos-tiktok",
+    "FartGram",
+    "finanzas-web"
+  ]
+}

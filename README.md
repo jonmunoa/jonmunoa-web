@@ -4,11 +4,34 @@ Web personal de Jon Muñoa, ingeniero de software.
 
 > El código es el medio. El valor está en la solución.
 
-## Probar localmente
+## Cómo funciona
 
-Abre `index.html` en un navegador moderno.
+- `site/` es lo que se publica (Netlify, sin build). `site/index.html` se edita a mano,
+  salvo los bloques entre marcadores `<!-- BUILD:… -->`.
+- `lab/projects.json` es la fuente de verdad de los proyectos: los que tienen `featured`
+  salen en **Construyo**; el resto, en **Laboratorio**, ordenados por fecha.
+- `scripts/capture.mjs` hace las capturas (Chrome del sistema) en `site/assets/lab/<id>/`.
+- `scripts/build.mjs` vuelca el JSON en `site/index.html`.
+- `scripts/og.mjs` regenera la imagen para compartir (`site/assets/og.png`).
 
-## Estructura
+## Actualización automática
 
-- `index.html`: web completa.
-- `assets/jon-munoa.png`: fotografía utilizada en la sección Sobre mí.
+1. Al terminar cada turno de Claude Code en un repo `github.com/jonmunoa/*`, el hook
+   `~/.claude/hooks/web-sync-check.mjs` compara su HEAD con `lastSyncedCommit`.
+2. Si hay commits nuevos, Claude lanza la skill `actualizar-web`
+   (`~/.claude/skills/actualizar-web/SKILL.md`): reescribe la ficha, rehace capturas,
+   regenera la página y hace push a `main`. Netlify despliega solo.
+3. Un repo personal nuevo dispara una pregunta a Jon (una vez por semana como mucho);
+   si no lo quiere en la web, se añade a `ignored`.
+4. Cada lunes, `.github/workflows/recapturar.yml` vuelve a capturar las webs en vivo.
+
+Los commits que solo sincronizan (sin cambios visibles) llevan `[skip netlify]`.
+
+## En local
+
+```bash
+npm ci
+npm run capture            # todas las capturas (o: npm run capture -- kitmaternidad)
+npm run build
+npx serve site             # o cualquier servidor estático sobre site/
+```

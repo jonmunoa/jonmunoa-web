@@ -1,0 +1,30 @@
+# Cada lunes vuelve a hacer las capturas de los proyectos que tienen web pública
+# y, si algo ha cambiado, regenera la página y hace commit (Netlify despliega solo).
+name: Recapturar webs en vivo
+on:
+  schedule:
+    - cron: '17 5 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recapturar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/capture.mjs --live
+        continue-on-error: true
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+      - run: node scripts/build.mjs
+      - name: Commit si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site
+          git diff --cached --quiet || (git commit -m "Recaptura semanal de las webs en vivo" && git push)

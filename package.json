@@ -1,0 +1,13 @@
+{
+  "name": "jonmunoa-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture": "node scripts/capture.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.56.1",
+    "sharp": "0.34.4"
+  }
+}

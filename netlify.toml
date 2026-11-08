@@ -1,0 +1,10 @@
+# La página está ya generada en site/ (scripts/build.mjs se ejecuta antes de cada commit),
+# así que Netlify solo tiene que publicar la carpeta, sin build.
+[build]
+  publish = "site"
+  command = ""
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
