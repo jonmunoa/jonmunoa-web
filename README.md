@@ -1,6 +1,6 @@
 # Jon Muñoa — Web personal
 
-Web personal de Jon Muñoa, ingeniero de software.
+Web personal de Jon Muñoa, ingeniero de software: https://jonmunoa.netlify.app
 
 > El código es el medio. El valor está en la solución.
 
