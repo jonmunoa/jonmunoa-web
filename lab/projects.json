@@ -275,31 +275,31 @@
       "repo": "jonmunoa/pinchazos-diabetes",
       "name": "Pinchazos",
       "category": "App Android",
-      "status": "uso personal",
+      "status": "en desarrollo",
       "hook": "Cada pinchazo de insulina, en dos toques.",
-      "description": "Registra cuándo y cuánta insulina, con varias insulinas, informes por momento del día y exportación a CSV. Sin cuentas ni Internet. Fue el origen de Dosify.",
+      "description": "Diario de insulina con la rápida y la lenta por separado. Los informes dicen cuánto te pones al día, si te has saltado la lenta y cuánto te pones en cada comida, y se pueden compartir con el médico. Sin cuentas ni Internet.",
       "stack": [
         "Kotlin",
         "Jetpack Compose",
         "Room"
       ],
       "started": "2026-10",
-      "updated": "2026-10-31",
+      "updated": "2026-11-08",
       "captures": [],
       "screenshots": [
         {
           "file": "registrar",
           "device": "mobile",
-          "alt": "Pantalla Registrar de Pinchazos: último pinchazo, dosis y hora"
+          "alt": "Pantalla Registrar de Pinchazos: última inyección, dosis y hora"
         },
         {
           "file": "informes",
           "device": "mobile",
-          "alt": "Informes de Pinchazos: cuándo y cuánto en los últimos 7 días"
+          "alt": "Informes de Pinchazos: media al día, insulina rápida y lenta y la lenta de los últimos 14 días"
         }
       ],
-      "lastSyncedCommit": "ad2c20ac7af8b0d97bce99c31ae16c4e4a4372ad",
-      "screenshotsNote": "Capturadas en el emulador (TimeReclaimedApi35) con el APK dist/Pinchazos-2.2.apk y 30 días de datos de demo importados por CSV; no se recapturan solas."
+      "lastSyncedCommit": "72fe08d175f1b5a5ebd27fa325fdc7477c200d7e",
+      "screenshotsNote": "Capturadas en el emulador con datos de demo (no son reales); no se recapturan solas."
     }
   ],
   "ignored": [
