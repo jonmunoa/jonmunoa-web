@@ -277,7 +277,7 @@
       "category": "App Android",
       "status": "en desarrollo",
       "hook": "Cada pinchazo de insulina, en dos toques.",
-      "description": "Diario de insulina con la rápida y la lenta por separado. Los informes dicen cuánto te pones al día, si te has saltado la lenta y cuánto te pones en cada comida, y se pueden compartir con el médico. Sin cuentas ni Internet.",
+      "description": "Diario de insulina con la rápida y la lenta por separado. Los informes dicen cuánto te pones al día, si te has saltado la lenta y cuánto te pones en cada comida, y se pueden compartir con el médico.",
       "stack": [
         "Kotlin",
         "Jetpack Compose",
