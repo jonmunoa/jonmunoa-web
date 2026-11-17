@@ -166,23 +166,28 @@
       "category": "App Android",
       "status": "en desarrollo",
       "hook": "Cuándo y cuánto, sin cuentas ni Internet.",
-      "description": "Registra las tomas de medicamentos por dosis o por pastillas, con informes de lo tomado frente a lo previsto. Todo se queda en el móvil. La versión 1.0 está preparada para Google Play.",
+      "description": "Lleva las tomas de medicamentos de toda la casa, cada persona con lo suyo, en una hoja de mañana a noche que se marca con el dedo. Avisa si aún es pronto para otra y lee la receta con una foto. Todo se queda en el móvil.",
       "stack": [
         "Kotlin",
         "Jetpack Compose",
         "Room"
       ],
       "started": "2026-10",
-      "updated": "2026-11-07",
+      "updated": "2026-11-17",
       "captures": [
         {
           "file": "hoy",
-          "src": "C:/Users/JonMunoaGutierrez/source/repos/dosify/docs/capturas/1-hoy.png",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/dosify/docs/capturas/rediseno/1-hoy.png",
           "device": "mobile"
         },
         {
           "file": "registrar",
-          "src": "C:/Users/JonMunoaGutierrez/source/repos/dosify/docs/capturas/4-registrar.png",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/dosify/docs/capturas/rediseno/2-registrar.png",
+          "device": "mobile"
+        },
+        {
+          "file": "anadir",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/dosify/docs/capturas/rediseno/4-anadir-a-mano.png",
           "device": "mobile"
         }
       ],
@@ -190,15 +195,20 @@
         {
           "file": "hoy",
           "device": "mobile",
-          "alt": "Pantalla Hoy de Dosify"
+          "alt": "Hoy en Dosify: la hoja del día por persona, de mañana a noche"
         },
         {
           "file": "registrar",
           "device": "mobile",
-          "alt": "Registrar una toma en Dosify"
+          "alt": "Registrar una toma en Dosify, con aviso de que aún es pronto"
+        },
+        {
+          "file": "anadir",
+          "device": "mobile",
+          "alt": "Añadir un tratamiento en Dosify escribiéndolo como una frase"
         }
       ],
-      "lastSyncedCommit": "9e700cef50d1ef8d2d7c6083cb104516054027c6"
+      "lastSyncedCommit": "d505cf9240772d8b59d4dde1dc6d2e547b4b0bc5"
     },
     {
       "id": "gold-silver",
