@@ -173,7 +173,7 @@
         "Room"
       ],
       "started": "2026-10",
-      "updated": "2026-11-17",
+      "updated": "2026-11-19",
       "captures": [
         {
           "file": "hoy",
@@ -208,7 +208,7 @@
           "alt": "Añadir un tratamiento en Dosify escribiéndolo como una frase"
         }
       ],
-      "lastSyncedCommit": "c093e94ff2e6d6293427faf69226dc4cbc38af39"
+      "lastSyncedCommit": "8e55f99432fd751cad1e0164e907c9b2f78593b2"
     },
     {
       "id": "gold-silver",
