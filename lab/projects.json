@@ -130,6 +130,7 @@
           "hide": [
             "iframe",
             "[class*=netlify]",
+        ".today-root",
             "[id*=netlify]"
           ]
         },
@@ -141,6 +142,7 @@
           "hide": [
             "iframe",
             "[class*=netlify]",
+        ".today-root",
             "[id*=netlify]"
           ]
         }
@@ -157,7 +159,7 @@
           "alt": "Resumen de entrenamiento en el móvil"
         }
       ],
-      "lastSyncedCommit": "722d6ae65560889d909e3abfa2b4bd2b9e0c2031"
+      "lastSyncedCommit": "ecd9cd345544b811f0a44b9f164bec54d94a7faa"
     },
     {
       "id": "dosify",
