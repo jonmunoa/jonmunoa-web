@@ -110,7 +110,7 @@
       "category": "Entrenamiento",
       "status": "activo",
       "hook": "Registrar no es decidir.",
-      "description": "Garmin aporta el histórico de running, bici, gimnasio y natación. Mis objetivos dan contexto. La IA convierte ambos en una planificación mensual que uso para entrenar, y cada actividad se puede compartir como un vídeo con música hecha a partir de mis pasos y mis pulsaciones.",
+      "description": "Garmin aporta el histórico de running, bici, gimnasio y natación. Mis objetivos dan contexto. La IA convierte ambos en una planificación mensual que uso para entrenar, y cada actividad se puede compartir como un vídeo corto montado como un reel.",
       "stack": [
         "Next.js",
         "Netlify",
@@ -157,7 +157,7 @@
           "alt": "Resumen de entrenamiento en el móvil"
         }
       ],
-      "lastSyncedCommit": "df700a0124c06e84bce8b92a00657e8afefe2374"
+      "lastSyncedCommit": "c1c84be47f7f9fd36b9d865cc8e6b419fe0fa844"
     },
     {
       "id": "dosify",
