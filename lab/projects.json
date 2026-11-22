@@ -320,7 +320,7 @@
       "category": "Juego web · afiliación",
       "status": "en desarrollo",
       "hook": "Un calendario de Adviento que se conduce.",
-      "description": "Cada día de diciembre abre una puerta con un circuito nuevo de tren de juguete bajo el árbol. Hay que apurar las curvas sin perder los regalos, encadenar campanas y cargar el turbo. Al llegar, el tiempo se comparte como un reto y tu amigo corre contra tu fantasma.",
+      "description": "Cada día de diciembre abre una puerta con un circuito nuevo de tren de juguete, bajo el árbol de un salón de noche. Hay que apurar las curvas sin perder los regalos, encadenar campanas y cargar el turbo. Al llegar, el tiempo se comparte como un reto y tu amigo corre contra tu fantasma.",
       "stack": [
         "three.js",
         "WebGL",
@@ -340,12 +340,22 @@
           "device": "desktop"
         },
         {
+          "file": "salon",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/salon.png",
+          "device": "desktop"
+        },
+        {
           "file": "compartir",
           "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/llegada-compartir.png",
           "device": "desktop"
         }
       ],
       "screenshots": [
+        {
+          "file": "salon",
+          "device": "desktop",
+          "alt": "Adviento Express: la maqueta nevada con el árbol en un salón de noche, con parqué, regalos y ventana"
+        },
         {
           "file": "carrera",
           "device": "desktop",
@@ -362,7 +372,7 @@
           "alt": "Llegada de Adviento Express con el resultado listo para compartir con emojis"
         }
       ],
-      "lastSyncedCommit": "8a88143bc0fe05f23061a92822afc010cb7b6a2e"
+      "lastSyncedCommit": "1b1568adf774ab7d2f08f7f96cedd1d39ed6af5c"
     }
   ],
   "ignored": [
