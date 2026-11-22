@@ -110,7 +110,7 @@
       "category": "Entrenamiento",
       "status": "activo",
       "hook": "Registrar no es decidir.",
-      "description": "Garmin aporta el histórico de running, bici, gimnasio y natación. Mis objetivos dan contexto. La IA convierte ambos en una planificación mensual que uso para entrenar, y cada actividad se puede compartir como un vídeo corto montado como un reel.",
+      "description": "Garmin aporta el histórico de running, bici, gimnasio y natación. Mis objetivos dan contexto. La IA convierte ambos en una planificación mensual que uso para entrenar, y cada actividad se puede compartir como un vídeo corto de la ruta sobre la ciudad en 3D, con los sitios por los que pasé.",
       "stack": [
         "Next.js",
         "Netlify",
@@ -120,7 +120,7 @@
       "url": "https://jonmunoafit.netlify.app/resumen",
       "urlLabel": "jonmunoafit.netlify.app",
       "started": "2026-08",
-      "updated": "2026-11-21",
+      "updated": "2026-11-22",
       "captures": [
         {
           "file": "resumen",
@@ -130,7 +130,7 @@
           "hide": [
             "iframe",
             "[class*=netlify]",
-        ".today-root",
+            ".today-root",
             "[id*=netlify]"
           ]
         },
@@ -142,7 +142,7 @@
           "hide": [
             "iframe",
             "[class*=netlify]",
-        ".today-root",
+            ".today-root",
             "[id*=netlify]"
           ]
         }
@@ -159,7 +159,7 @@
           "alt": "Resumen de entrenamiento en el móvil"
         }
       ],
-      "lastSyncedCommit": "ecd9cd345544b811f0a44b9f164bec54d94a7faa"
+      "lastSyncedCommit": "e24d2e2879474ff64f1a956d29691ac28fe26936"
     },
     {
       "id": "dosify",
