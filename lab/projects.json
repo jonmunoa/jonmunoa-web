@@ -312,6 +312,57 @@
       ],
       "lastSyncedCommit": "377d3fc8d543b4a7ea7aca8f1e385866a67d6131",
       "screenshotsNote": "Capturadas en el emulador con datos de demo (no son reales); no se recapturan solas."
+    },
+    {
+      "id": "adviento-express",
+      "repo": "jonmunoa/Advent-train",
+      "name": "Adviento Express",
+      "category": "Juego web · afiliación",
+      "status": "en desarrollo",
+      "hook": "Un calendario de Adviento que se conduce.",
+      "description": "Cada día de diciembre abre una puerta con un circuito nuevo de tren de juguete bajo el árbol. Hay que apurar las curvas sin perder los regalos, encadenar campanas y cargar el turbo. Al llegar, el tiempo se comparte como un reto y tu amigo corre contra tu fantasma.",
+      "stack": [
+        "three.js",
+        "WebGL",
+        "Web Audio"
+      ],
+      "started": "2026-11",
+      "updated": "2026-11-22",
+      "captures": [
+        {
+          "file": "carrera",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/carrera-turbo.png",
+          "device": "desktop"
+        },
+        {
+          "file": "reto",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/billete-reto.png",
+          "device": "desktop"
+        },
+        {
+          "file": "compartir",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/llegada-compartir.png",
+          "device": "desktop"
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "carrera",
+          "device": "desktop",
+          "alt": "Adviento Express: el tren con turbo entre abetos nevados, campanas y regalos gigantes"
+        },
+        {
+          "file": "reto",
+          "device": "desktop",
+          "alt": "Billete de Adviento Express con el reto de un amigo y las medallas del día"
+        },
+        {
+          "file": "compartir",
+          "device": "desktop",
+          "alt": "Llegada de Adviento Express con el resultado listo para compartir con emojis"
+        }
+      ],
+      "lastSyncedCommit": "923a8ef2f528e30c9d1661d3a732e4620d460c7d"
     }
   ],
   "ignored": [
