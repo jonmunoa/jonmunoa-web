@@ -316,63 +316,75 @@
     {
       "id": "adviento-express",
       "repo": "jonmunoa/Advent-train",
-      "name": "Adviento Express",
-      "category": "Juego web · afiliación",
+      "name": "El tren del escaparate",
+      "category": "Web 3D · afiliación",
       "status": "en desarrollo",
-      "hook": "Un calendario de Adviento que se conduce.",
-      "description": "Cada día de diciembre abre una puerta con un circuito de tren de juguete bajo el árbol de un salón de noche, y cada puerta cambia las reglas: hielo, ventisca, túnel, agujas con atajo. Hay que apurar las curvas sin perder los regalos, repartirlos en las chimeneas y sonar las campanas para ganar tres estrellas. El resultado se comparte como un reto contra tu fantasma o en una liga de amigos.",
+      "hook": "Los trenes de los escaparates que mirabas de niño.",
+      "description": "Un niño pasea de la mano de su madre por una calle nevada y se queda embobado con los trenes de juguete de los escaparates. Cada tarde de diciembre se enciende uno nuevo, con su maqueta, su tren y un momento corto sin palabras. Se puede entrar en el escaparate, seguir al tren o dejarlo de fondo con villancicos.",
       "stack": [
         "three.js",
         "WebGL",
         "Web Audio"
       ],
       "started": "2026-11",
-      "updated": "2026-11-22",
+      "updated": "2026-11-26",
       "captures": [
         {
-          "file": "carrera",
-          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/carrera-turbo.png",
+          "file": "calle",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/escaparates-calle.jpg",
           "device": "desktop"
         },
         {
-          "file": "reto",
-          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/billete-reto.png",
+          "file": "cristal",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/escaparates-cristal.jpg",
           "device": "desktop"
         },
         {
-          "file": "salon",
-          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/salon.png",
+          "file": "maqueta",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/escaparates-maqueta.jpg",
           "device": "desktop"
         },
         {
-          "file": "compartir",
-          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/llegada-compartir.png",
-          "device": "desktop"
+          "file": "cristal-movil",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/escaparates-cristal-movil.jpg",
+          "device": "mobile"
+        },
+        {
+          "file": "maqueta-movil",
+          "src": "C:/Users/JonMunoaGutierrez/source/repos/Advent-train/docs/capturas/escaparates-maqueta-movil.jpg",
+          "device": "mobile"
         }
       ],
       "screenshots": [
         {
-          "file": "salon",
+          "file": "calle",
           "device": "desktop",
-          "alt": "Adviento Express: la maqueta nevada con el árbol en un salón de noche, con parqué, regalos y ventana"
+          "alt": "El tren del escaparate: un niño y su madre pasean de noche por una calle nevada con guirnaldas"
         },
         {
-          "file": "carrera",
+          "file": "cristal",
           "device": "desktop",
-          "alt": "Adviento Express: el tren con turbo entre abetos nevados, campanas y regalos gigantes"
+          "alt": "El niño y su madre miran por el cristal una maqueta nevada con una fábrica de juguetes y su tren"
         },
         {
-          "file": "reto",
+          "file": "maqueta",
           "device": "desktop",
-          "alt": "Billete de Adviento Express con el reto de un amigo y las medallas del día"
+          "alt": "Dentro del escaparate: una locomotora de vapor con vagones de regalos entre nieve y abetos"
         },
         {
-          "file": "compartir",
-          "device": "desktop",
-          "alt": "Llegada de Adviento Express con el resultado listo para compartir con emojis"
+          "file": "cristal-movil",
+          "device": "mobile",
+          "alt": "En el móvil, el escaparate de la fábrica de Papá Noel con el botón para ver el tren de cerca"
+        },
+        {
+          "file": "maqueta-movil",
+          "device": "mobile",
+          "alt": "En el móvil, el tren azul cruza un puente de noche dentro de la maqueta"
         }
       ],
-      "lastSyncedCommit": "70444b0353f38cc83bc553db451d133b8f551710"
+      "lastSyncedCommit": "c56b873b2bf60f1fe27cc9d923cbc36f171ba446",
+      "url": "https://tren-navidad.vercel.app/escaparates.html",
+      "urlLabel": "tren-navidad.vercel.app"
     }
   ],
   "ignored": [
