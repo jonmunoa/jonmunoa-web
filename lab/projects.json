@@ -316,10 +316,10 @@
     {
       "id": "adviento-express",
       "repo": "jonmunoa/Advent-train",
-      "name": "El tren del escaparate",
+      "name": "La calle de los trenes",
       "category": "Web 3D · afiliación",
       "status": "en desarrollo",
-      "hook": "Los trenes de los escaparates que mirabas de niño.",
+      "hook": "Los trenes de Navidad de los escaparates que mirabas de niño.",
       "description": "Un niño pasea de la mano de su madre por una calle nevada y se queda embobado con los trenes de juguete de los escaparates. Cada tarde de diciembre se enciende uno nuevo, con su maqueta, su tren y un momento corto sin palabras. Se puede entrar en el escaparate, seguir al tren o dejarlo de fondo con villancicos.",
       "stack": [
         "three.js",
@@ -359,7 +359,7 @@
         {
           "file": "calle",
           "device": "desktop",
-          "alt": "El tren del escaparate: un niño y su madre pasean de noche por una calle nevada con guirnaldas"
+          "alt": "La calle de los trenes: un niño y su madre pasean de noche por una calle nevada con guirnaldas"
         },
         {
           "file": "cristal",
@@ -379,10 +379,10 @@
         {
           "file": "maqueta-movil",
           "device": "mobile",
-          "alt": "En el móvil, el tren azul cruza un puente de noche dentro de la maqueta"
+          "alt": "En el móvil, el tren azul echa humo de noche dentro de la maqueta, bajo una aurora"
         }
       ],
-      "lastSyncedCommit": "a2cfc3d549e2dd972c732f1b37e0e3f1119d9b6d",
+      "lastSyncedCommit": "af8f0152166b56faee9784734f64ac27ec965428",
       "url": "https://tren-navidad.vercel.app/",
       "urlLabel": "tren-navidad.vercel.app"
     }
